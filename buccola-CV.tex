@@ -1,0 +1,378 @@
+%===============================================================================
+%
+%  vim:     set fenc=utf8 tw=79 sw=2 sts=2 expandtab:
+%  file:    buccola-CV.tex
+%  author:  Brian Buccola
+%
+%===============================================================================
+
+
+
+%============%
+%            %
+%  PREAMBLE  %
+%            %
+%============%
+
+\documentclass[11pt,letterpaper]{article}
+
+
+
+%=============================
+% Packages and basic settings
+%=============================
+
+\newcommand{\name}{Brian Buccola}
+
+\usepackage[T1]{fontenc}
+\usepackage[sc,osf]{mathpazo}
+
+\usepackage[x11names]{xcolor}
+\newcommand{\linkcolor}{black}
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{sectsty}
+  \sectionfont{\rmfamily\mdseries\bfseries\large}
+  \subsectionfont{\rmfamily\mdseries\itshape\normalsize}
+
+\usepackage[yyyymmdd]{datetime}
+  \renewcommand{\dateseparator}{-}
+  \newdateformat{mydate}{%
+    \THEYEAR{} \shortmonthname[\THEMONTH]{} \twodigit{\THEDAY}
+  }
+  \mydate
+
+\usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhf{}
+  \lhead{\textsc{\name}}
+  \rhead{\textit{Curriculum vitae} / \thepage}
+  \rfoot{{\footnotesize\ttfamily Last updated: \today{} \currenttime}}
+  \fancypagestyle{plain}{% redefine plain page style for 1st page
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+    \rfoot{{\footnotesize\ttfamily Last updated: \today{} \currenttime}}
+  }
+  \thispagestyle{plain}% page style for 1st page
+  \setlength{\headheight}{14pt}
+
+\usepackage{parskip}
+\setlength\parindent{0em}
+
+\usepackage{hyperref}
+  \hypersetup{%
+    colorlinks  = true,
+    allcolors   = \linkcolor,
+    pdfauthor   = {\name},
+    pdftitle    = {\name\ | Curriculum Vitae},
+    pdfsubject  = {Curriculum Vitae},
+    pdfkeywords = {\name, CV, linguistics, McGill},
+    pdfpagemode = UseNone
+  }
+
+
+
+%========
+% Macros
+%========
+
+\newcommand{\cvitem}[2]{%
+  \begin{minipage}[t]{0.24\textwidth}
+    #1 % date goes here, possibly formatted with \formatdate
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.74\textwidth}
+    #2 % item details go here
+  \end{minipage}
+}
+
+\newcommand{\datefill}{%
+  \cvitem{\hrulefill}{}
+}
+
+\renewenvironment{itemize}{% lists without bullets
+  \begin{list}{}{%
+    \setlength{\itemsep}{0.5em}
+    \setlength{\leftmargin}{0em}
+  }
+}{%
+  \end{list}
+}
+
+\newcommand{\tadetails}[2]{% list of TA duties and prof
+  {\footnotesize Duties included: #1. \\ Professor: #2.}
+}
+
+\newcommand{\award}[2]{%
+  \begin{minipage}[t]{0.78\textwidth}
+    #1        % award details
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.20\textwidth}
+    \hfill #2 % dollar amount
+  \end{minipage}
+}
+
+
+
+%========%
+%        %
+%  BODY  %
+%        %
+%========%
+
+\begin{document}
+
+
+
+%=========================================
+% Title, contact info, research interests
+%=========================================
+
+\begin{minipage}[b]{0.43\textwidth}
+  {\Huge\scshape \name}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.55\textwidth}
+  \begin{flushright}
+    \href{mailto:brian.buccola@mail.mcgill.ca}{\ttfamily\small
+      brian.buccola@mail.mcgill.ca}                               \\
+    \href{http://people.linguistics.mcgill.ca/}{\ttfamily\small
+    people.linguistics.mcgill.ca/\textasciitilde{}brian.buccola}  \\
+    {\footnotesize 1085 Dr-Penfield, Montr\'{e}al, Qu\'{e}bec, H2L 4H1, (312)
+  945 6857}
+  \end{flushright}
+\end{minipage}
+
+\vspace{-1.25em}
+
+\hrulefill
+
+\cvitem{\textit{Research interests}}{formal semantics, pragmatics, phonology,
+computational \& mathematical linguistics, mathematical logic.}
+
+
+
+%===========
+% Main body
+%===========
+
+
+
+\section*{Education}
+
+\cvitem{2010--present}{Ph.D. candidate, Linguistics,
+  \href{http://www.mcgill.ca/}{McGill University}.}
+
+\cvitem{2009--2010}{Qualifying year, Linguistics, McGill University.}
+
+\cvitem{2004--2008}{B.S. Mathematics, Honors College,
+  \href{http://www.luc.edu/}{Loyola University Chicago}.}
+
+\cvitem{2004--2008}{B.A. Classics, Honors College,
+  \href{http://www.luc.edu/}{Loyola University Chicago}. \\ {\footnotesize Minor
+  concentrations: Latin, Ancient Greek.}}
+
+\cvitem{1999--2004}{\href{http://www.jesuitnola.org/}{Jesuit High School New
+Orleans}.}
+
+\subsection*{Summer schools}
+
+\cvitem{2012 \shortmonthname[6]}{\href{http://nasslli2012.com/about}{North
+American Summer School of Logic, Language, and Information}.}
+
+
+
+\section*{Refereed papers}
+
+\cvitem{2012}{Schwarz, Bernhard, \textbf{\name}, and Michael Hamilton. ``Two
+Types of Class B Numeral Modifiers: a Reply to Nouwen 2010''.  \textit{Semantics
+and Pragmatics}. doi: \url{http://dx.doi.org/10.3765/sp}.}
+
+
+
+\section*{Unpublished papers}
+
+\cvitem{2013}{\textbf{\name}. ``Two proofs that classic OT is expressively
+weaker than ordered rewrite rules''. Second evaluation paper. McGill
+University.}
+
+\cvitem{2012}{\textbf{\name}. ``Some remarks on inference patterns involving
+epistemic modality''. First evaluation paper. McGill University.}
+
+
+
+\section*{Refereed presentations}
+
+\cvitem{\formatdate{10}{3}{2012}}{\textbf{\name}. ``The nature of epistemic
+implications arising from superlative quantifiers''. Toronto-Ottawa-Montreal
+semantics workshop. University of Ottawa.}
+
+\cvitem{\formatdate{9}{4}{2011}}{\textbf{\name}. ``Phrasal and clausal
+comparatives: some puzzling evidence from Italian''. Toronto-Ottawa-Montreal
+semantics workshop.  University of Toronto.}
+
+
+
+\section*{Non--refereed presentations}
+
+\cvitem{\formatdate{5}{11}{2012}}{\textbf{\name}. ``Formalization in
+linguistics''. Invited lecture. Brendan Gillon's pragmatics course (LING 565).
+McGill University.}
+
+\cvitem{\formatdate{31}{7}{2012}}{\textbf{\name}. ``Some remarks on inference
+patterns involving epistemic modality'', part 2. Syntax-Semantics Research
+Group.  McGill University.}
+
+\cvitem{\formatdate{11}{7}{2012}}{\textbf{\name}. ``Some remarks on inference
+patterns involving epistemic modality'', part 1. Syntax-Semantics Research
+Group.  McGill University.}
+
+\cvitem{\formatdate{25}{11}{2012}}{\textbf{\name}. ``On Cummins and Katsos
+(2010): Comparative and superlative quantifiers: Pragmatic effects of comparison
+type''.  Syntax-Semantics Research Group. McGill University.}
+
+\cvitem{\formatdate{22}{6}{2011}}{\textbf{\name}, Michael Hamilton, and Bernhard
+Schwarz.  ``On Nouwen (2010): Two kinds of modified numerals'', part 2.
+Syntax-Semantics Research Group. McGill University.}
+
+\cvitem{\formatdate{8}{6}{2011}}{\textbf{\name}, Michael Hamilton, and Bernhard
+Schwarz.  ``On Nouwen (2010): Two kinds of modified numerals'', part 1.
+Syntax-Semantics Research Group. McGill University.}
+
+
+
+\section*{Awards \& special honors}
+
+\cvitem{2012--2013}{\award{Cremona Fellowship, Department of Linguistics, McGill
+University.}{\$8,479}}
+
+\cvitem{2012--2013}{\award{Graduate Excellence Fellowship, McGill
+University.}{\$7,000}}
+
+\cvitem{2012}{\award{NASSLLI full scholarship (tuition \& fees, accommodation,
+travel stipend)}{\$410}}
+
+\cvitem{2011--2012}{\award{Graduate Excellence Fellowship, McGill
+University.}{\$6,500}}
+
+\cvitem{2010--2011}{\award{Graduate Enrolment Recruitment Initiative, McGill
+University.}{\$5,000}}
+
+\cvitem{2010--2011}{\award{McCall MacBain Award, McGill University.}{\$10,000}}
+
+\cvitem{2007--2008}{\award{National SMART Grant, Loyola University Chicago
+(Science and Mathematics Access to Retain Talent).}{\$4,000}}
+
+\cvitem{2004--2008}{\award{National Merit Finalist Scholarship, full tuition for
+4 years, Loyola University Chicago.}{\textasciitilde\$100,000}}
+
+\cvitem{2008 (inducted)}{\href{http://www.pbk.org/}{Phi Beta Kappa}.}
+
+\cvitem{2004}{\href{http://www.nationalmerit.org/}{National Merit} Scholar.}
+
+\cvitem{1999 (accepted)}{\href{http://www.mensa.org/}{Mensa}.}
+
+
+
+\section*{Teaching}
+
+\cvitem{2013 winter}{Phonetics (LING 330), teaching assistant, McGill
+  University. \\ \tadetails{weekly lecture (2 hours/week); office hours; grade
+  assignments, midterm exam, and final exam}{Morgan Sonderegger}}
+
+\cvitem{2012 fall}{Semantics (LING 360), teaching assistant, McGill University.
+  \\ \tadetails{two lectures; office hours; grade assignments, midterm exam,
+  and final exam}{Brendan Gillon}}
+
+\cvitem{2012 winter}{Phonetics (LING 330), teaching assistant, McGill
+  University. \\ \tadetails{weekly lecture (2 hours/week); office hours; grade
+  assignments, midterm exam, and final exam}{Heather Goad}}
+
+\cvitem{2011 fall}{Phonology I (LING 331), teaching assistant, McGill
+  University. \\ \tadetails{weekly lecture (1 hour/week); office hours; grade
+  quizzes, assignments, midterm exam, and final exam}{Tobin Skinner}}
+
+\cvitem{2011 winter}{Phonetics (LING 330), teaching assistant, McGill
+  University. \\ \tadetails{weekly lecture (2 hours/week); office hours; grade
+  quizzes, assignments, midterm exams, and final exam}{Sara Mackenzie}}
+
+\cvitem{2010 fall}{Intro to Linguistics (LING 201), teaching assistant, McGill
+  University. \\ \tadetails{weekly lecture (2 hours/week); office hours; grade
+  quizzes, assignments, midterm exam, and final exam}{Tanya Slavin}}
+
+\cvitem{2010 fall}{Neuroscience of Language (LING 370), grader, McGill
+  University. \\ \tadetails{grade assignments, midterm exam, and final
+  exam}{Isabelle Deschamps, Andrea Santi}}
+
+
+
+\section*{Service}
+
+\cvitem{2013 \shortmonthname[1]}{Student host for invited colloquium speaker
+Kai von Fintel, McGill University.}
+
+\cvitem{2012--present}{Co-editor, McGill Working Papers in Linguistics
+(\href{http://www.mcgill.ca/mcgwpl/}{McGWPL}).}
+
+\cvitem{\formatdate{20}{8}{2012}}{Bib\TeX{} workshop (with Alanah McKillen),
+McGill University.}
+
+\cvitem{2012 \shortmonthname[5]--\shortmonthname[6]}{Graduate student
+representative for syntax job hire, McGill University.}
+
+\cvitem{2011--2012}{Co-editor, McGill Linguistics Blog
+(\href{https://blogs.mcgill.ca/mcling/}{McLing}).}
+
+\cvitem{\formatdate{2}{2}{2012}}{\LaTeX{} workshop (with Alanah McKillen),
+McGill University.}
+
+\cvitem{2012 \shortmonthname[1]}{Abstract reviewer for McCCLU (the McGill
+Canadian Conference for Linguistics Undergraduates).}
+
+\cvitem{2011 \shortmonthname[12]}{Student host for invited colloquium speaker
+Rick Nouwen, McGill University.}
+
+
+
+\section*{Languages}
+
+\cvitem{\textit{Natural}}{%
+  \begin{itemize}
+    \item English \hfill (native)
+    \item Italian \hfill (fluent)
+    \item German \hfill (conversational; proficient in reading, writing)
+    \item French \hfill (conversational; proficient in reading, writing)
+    \item Spanish \hfill (working knowledge; research)
+    \item Latin \hfill (proficient in translation; research)
+    \item Ancient Greek \hfill (proficient in translation; research)
+  \end{itemize}
+}
+
+\cvitem{\textit{Formal}}{%
+  \begin{itemize}
+    \item Linux shell (Bash)
+    \item \LaTeX{}
+    \item HTML
+    \item CSS
+    \item Haskell \hfill (beginner)
+    \item Python \hfill (beginner)
+  \end{itemize}
+}
+
+
+
+\section*{Non-academic interests}
+\begin{description}
+  \item History and philosophy of math and science.
+  \item Early American blues (Delta) and jazz (New Orleans).
+  \item Tinkering with Linux, \LaTeX{}, and other computery things.
+  \item Brewing beer, cooking.
+  \item Chess, puzzles.
+\end{description}
+
+
+
+\end{document}
