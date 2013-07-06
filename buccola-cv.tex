@@ -34,11 +34,13 @@
 
 \usepackage{longtable} % normal \tabular environment does not allow page breaks
 
-% \usepackage[margin=1in]{geometry}
+\usepackage[margin=1in]{geometry}
+
+\usepackage{needspace}
 
 \usepackage{sectsty}
-\sectionfont{\rmfamily\mdseries\scshape\large \sectionrule{0pt}{0pt}{-1ex}{1pt}}
-\subsectionfont{\rmfamily\mdseries\scshape\normalsize}
+\sectionfont{\needspace{4\baselineskip} \rmfamily\mdseries\scshape\large \sectionrule{0pt}{0pt}{-1ex}{1pt}}
+\subsectionfont{\needspace{4\baselineskip} \rmfamily\mdseries\scshape\normalsize}
 
 \usepackage{natbib}
 \usepackage{bibentry}
@@ -48,10 +50,7 @@
 \mydate
 
 \newdateformat{mydatenoday}{\shortmonthname[\THEMONTH]\ \THEYEAR}
-\newcommand{\formatdatenoday}[2]{%
-  \mydatenoday
-  \formatdate{0}{#1}{#2}
-}
+\newcommand{\formatdatenoday}[2]{\mydatenoday\formatdate{0}{#1}{#2}}
 
 \usepackage{hyperref}
 \hypersetup{%
@@ -69,7 +68,7 @@
 
 \setlength\parindent{0pt}
 
-\thispagestyle{empty}
+\thispagestyle{plain}
 \pagestyle{plain}
 
 
@@ -79,7 +78,7 @@
 %========
 
 \newcommand{\datewidth}{0.16}
-\newcommand{\bodywidth}{0.80}
+\newcommand{\bodywidth}{0.81}
 
 \definecolor{lightgray}{gray}{0.85}
 
@@ -89,7 +88,7 @@
 \newcolumntype{R}{p{\bodywidth\textwidth}}
 
 \newenvironment{cvsection}{%
-  \vspace{-3ex}
+  \vspace{-2ex}
   \renewcommand{\arraystretch}{1.5}
   \begin{longtable}{@{} L R @{}}
   % Uncomment line below to add gray vrule between date and body.
@@ -106,7 +105,7 @@
 }
 
 \newcommand{\award}[2]{%
-  #1~(#2) % award description and award amount
+  #1~(#2). % award description and award amount
 }
 
 
@@ -128,17 +127,24 @@
 % Title, personal info, research interests
 %=========================================
 
-\begin{minipage}[b]{0.60\textwidth}
-  {\Huge\scshape \name}
-\end{minipage}
-\hfill
-\begin{minipage}[b]{0.39\textwidth}
-  \begin{flushright}
-    {\normalsize \today}
-  \end{flushright}
-\end{minipage}
+\begin{center}
+  {\Huge\scshape \name} \\[\baselineskip]
 
-\bigskip
+  Curriculum Vit\ae \\
+  \today
+\end{center}
+
+% \begin{minipage}[b]{0.60\textwidth}
+%   {\Huge\scshape \name}
+% \end{minipage}
+% \hfill
+% \begin{minipage}[b]{0.39\textwidth}
+%   \begin{flushright}
+%     {\normalsize \today}
+%   \end{flushright}
+% \end{minipage}
+
+% \bigskip
 
 \section*{Personal Information}
 
@@ -166,7 +172,7 @@
 \section*{Research Interests}
 
 \begin{cvsection}
-  General & Formal semantics, pragmatics; phonology; mathematical \&
+  General & Formal semantics, pragmatics; phonology; mathematical and
   computational linguistics; philosophy of language. \\
 
   Semantics & Quantification; numeral and scalar modification; nonmonotonic
@@ -253,29 +259,29 @@
 \section*{Non--Refereed Presentations}
 
 \begin{cvsection}
-  2012 & \name. ``Formalization in linguistics''.  Invited lecture. Brendan
-  Gillon's pragmatics course (LING 565).  McGill University,
+  2012 & \name. Formalization in linguistics.  Invited lecture, Brendan
+  Gillon's pragmatics course (LING 565), McGill University,
   \formatdate{5}{11}{2012}. \\
 
-  2012 & \name. ``Some remarks on inference patterns involving epistemic
-  modality'', part 2. Syntax--Semantics Research Group.  McGill University,
+  2012 & \name. Some remarks on inference patterns involving epistemic
+  modality, part 2. Syntax--Semantics Research Group, McGill University,
   \formatdate{31}{7}{2012}. \\
 
-  2012 & \name. ``Some remarks on inference patterns involving epistemic
-  modality'', part 1. Syntax--Semantics Research Group.  McGill University,
+  2012 & \name. Some remarks on inference patterns involving epistemic
+  modality, part 1. Syntax--Semantics Research Group, McGill University,
   \formatdate{11}{7}{2012}. \\
 
-  2012 & \name. ``On Cummins and Katsos (2010): Comparative and superlative
-  quantifiers: Pragmatic effects of comparison type''.  Syntax--Semantics
-  Research Group. McGill University, \formatdate{25}{11}{2012}. \\
+  2012 & \name. On Cummins and Katsos (2010): Comparative and superlative
+  quantifiers: Pragmatic effects of comparison type. Syntax--Semantics Research
+  Group, McGill University, \formatdate{25}{11}{2012}. \\
 
-  2011 & \name, Michael Hamilton, and Bernhard Schwarz.  ``On Nouwen (2010):
-  Two kinds of modified numerals'', part 2.  Syntax--Semantics Research Group.
-  McGill University, \formatdate{22}{6}{2011}. \\
+  2011 & \name, Michael Hamilton, and Bernhard Schwarz. On Nouwen (2010): Two
+  kinds of modified numerals, part 2. Syntax--Semantics Research Group, McGill
+  University, \formatdate{22}{6}{2011}. \\
 
-  2011 & \name, Michael Hamilton, and Bernhard Schwarz.  ``On Nouwen (2010):
-  Two kinds of modified numerals'', part 1.  Syntax--Semantics Research Group.
-  McGill University, \formatdate{8}{6}{2011}.
+  2011 & \name, Michael Hamilton, and Bernhard Schwarz. On Nouwen (2010): Two
+  kinds of modified numerals, part 1. Syntax--Semantics Research Group, McGill
+  University, \formatdate{8}{6}{2011}.
 \end{cvsection}
 
 
@@ -425,7 +431,7 @@
 \subsection*{Formal}
 
 \begin{cvsection}
-  Linux shell {\small (Bash)} & Advanced \\
+  Linux shell {\small (Bash, Zsh)} & Advanced \\
   \LaTeX{} & Proficient \\
   HTML/CSS & Proficient \\
   Haskell & Basic \\
