@@ -104,6 +104,11 @@
   \\ Instructor: #3.}}
 }
 
+\newcommand{\course}[2]{% course name and course description
+  \parbox[t]{\bodywidth\textwidth}{#1. \\ {\footnotesize Course description:
+      #2.}}
+}
+
 \newcommand{\award}[2]{%
   #1~(#2). % award description and award amount
 }
@@ -358,11 +363,20 @@
 
 \section*{Teaching}
 
-\begin{cvsection}
-  {\small Summer} 2014 & Introduction to Linguistics (LING 201), instructor,
-  McGill University.
-  \\[0.10ex]
+\subsection*{As Instructor}
 
+\begin{cvsection}
+  {\small Summer} 2014 & \course{Introduction to Linguistics (LING 201),
+    instructor, McGill University}{introduction to the techniques of linguistic
+    analysis; topics covered include phonetics, phonology, morphology, syntax,
+    and semantics.}
+  \\[0.10ex]
+\end{cvsection}
+
+\vspace{-1ex}
+\subsection*{As Teaching Assistant}
+
+\begin{cvsection}
   {\small Winter} 2014 & \taship{Phonetics (LING 330), teaching assistant,
   McGill University}{weekly lecture (2 hours/week); office hours; grade
   assignments, midterm exam, and final
