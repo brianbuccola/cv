@@ -6,17 +6,13 @@
 %
 %===============================================================================
 
-
-
 %============%
 %            %
 %  PREAMBLE  %
 %            %
 %============%
 
-\documentclass[letterpaper]{article}
-
-
+\documentclass[a4paper]{article}
 
 %=============================
 % Packages and basic settings
@@ -24,34 +20,42 @@
 
 \newcommand{\name}{Brian Buccola}
 
+% Font settings
 \usepackage[T1]{fontenc}
+\usepackage{microtype}
 \usepackage[sc,osf]{mathpazo}
 
-\usepackage[dvipsnames]{xcolor}
-\newcommand{\linkcolor}{Blue}
-
-\usepackage{array} % required for defining newcolumntype with custom vrule
-
-\usepackage{longtable} % normal \tabular environment does not allow page breaks
-
+% Margins
 \usepackage[margin=1in]{geometry}
 
-\usepackage{needspace}
+% References
+\usepackage{natbib}
+\usepackage{bibentry}
 
+% Section fonts
 \usepackage{sectsty}
 \sectionfont{\needspace{3\baselineskip} \rmfamily\mdseries\scshape\large \sectionrule{0pt}{0pt}{-1ex}{1pt}}
 \subsectionfont{\needspace{2\baselineskip} \rmfamily\mdseries\scshape\normalsize}
 
-\usepackage{natbib}
-\usepackage{bibentry}
-
+% Dates and times
 \usepackage{datetime}
 \newdateformat{mydate}{\twodigit{\THEDAY}\ \shortmonthname[\THEMONTH] \THEYEAR}
 \mydate
-
 \newdateformat{mydatenoday}{\shortmonthname[\THEMONTH]\ \THEYEAR}
 \newcommand{\formatdatenoday}[2]{\mydatenoday\formatdate{0}{#1}{#2}}
 
+% Colors
+\usepackage[dvipsnames]{xcolor}
+\newcommand{\linkcolor}{Blue}
+
+% Packages for CV environment
+\usepackage{array} % required for defining newcolumntype with custom vrule
+\usepackage{longtable} % normal \tabular environment does not allow page breaks
+\setlength{\LTpre}{0pt} % glue before longtable
+\addtolength{\LTpost}{0ex} % glue after longtable
+\usepackage{needspace}
+
+% Hyper links and PDF info
 \usepackage{hyperref}
 \hypersetup{%
   colorlinks  = true,
@@ -70,11 +74,6 @@
 
 \thispagestyle{plain}
 \pagestyle{plain}
-
-\setlength{\LTpre}{0pt} % glue before longtable
-\addtolength{\LTpost}{0ex} % glue after longtable
-
-
 
 %========
 % Macros
@@ -113,8 +112,6 @@
   #1~(#2). % award description and award amount
 }
 
-
-
 %========%
 %        %
 %  BODY  %
@@ -126,8 +123,6 @@
 \bibliographystyle{plain}
 \nobibliography{/home/brian/documents/references/references}
 
-
-
 %=========================================
 % Title, personal info, research interests
 %=========================================
@@ -138,8 +133,6 @@
   Curriculum Vit\ae \\
   \today
 \end{center}
-
-
 
 \section*{Personal Information}
 
@@ -162,8 +155,6 @@
   Website & \url{http://people.linguistics.mcgill.ca/~brian.buccola/}
 \end{cvsection}
 
-
-
 \section*{Research Interests}
 
 \begin{cvsection}
@@ -177,8 +168,6 @@
   Phonology & Opacity; Optimality Theory; finite state phonology; generative
   capacity of phonological grammars. \\
 \end{cvsection}
-
-
 
 %===========
 % Main body
@@ -219,8 +208,6 @@
   \formatdatenoday{6}{2012}. \\
 \end{cvsection}
 
-
-
 \section*{Refereed Papers}
 
 \begin{cvsection}
@@ -232,8 +219,6 @@
   2012 & \null\bibentry{schwarz.etal2012}.
   [\href{http://dx.doi.org/10.3765/sp}{doi}] \\
 \end{cvsection}
-
-
 
 \section*{Manuscripts}
 
@@ -248,8 +233,6 @@
   2012 & \null\bibentry{buccola2012eval1}.
   [\href{http://people.linguistics.mcgill.ca/~brian.buccola/files/buccola2012-eval1.pdf}{draft}] \\
 \end{cvsection}
-
-
 
 \section*{Refereed Presentations}
 
@@ -268,8 +251,6 @@
   2011 & \null\bibentry{buccola2011tom}.
   [\href{http://people.linguistics.mcgill.ca/~brian.buccola/files/buccola2011-tom4.pdf}{handout}] \\
 \end{cvsection}
-
-
 
 \section*{Non-Refereed Presentations}
 
@@ -314,8 +295,6 @@
   University, \formatdate{8}{6}{2011}. \\
 \end{cvsection}
 
-
-
 \section*{Edited Volumes}
 
 \begin{cvsection}
@@ -324,8 +303,6 @@
   2013 & \null\bibentry{mckillen.buccola2013}.
   [\href{https://www.mcgill.ca/mcgwpl/archives/volume-231-2013}{issue}]
 \end{cvsection}
-
-
 
 \section*{Awards}
 
@@ -364,8 +341,6 @@
   Chicago}{\textasciitilde\$100,000} \\
 \end{cvsection}
 
-
-
 \section*{Honors and Associations}
 
 \begin{cvsection}
@@ -381,8 +356,6 @@
 
   1999 {\footnotesize (accepted)} & \href{http://www.mensa.org/}{Mensa}. \\
 \end{cvsection}
-
-
 
 \section*{Teaching}
 
@@ -457,8 +430,6 @@
     Santi}} \\
 \end{cvsection}
 
-
-
 \section*{Service}
 
 \subsection*{Reviewing}
@@ -512,8 +483,6 @@
   (\href{https://blogs.mcgill.ca/mcling/}{McLing}). \\
 \end{cvsection}
 
-
-
 \section*{Languages}
 
 \vspace{1ex}
@@ -540,8 +509,6 @@
   Python & Basic \\
 \end{cvsection}
 
-
-
 \section*{Non-Academic Interests}
 
 \begin{list}{}{\leftmargin=0pt}
@@ -551,7 +518,5 @@
   \item Brewing beer, cooking.
   \item Chess, puzzles.
 \end{list}
-
-
 
 \end{document}
