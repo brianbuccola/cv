@@ -1,6 +1,6 @@
 %===============================================================================
 %
-%  vim:     set fenc=utf8 tw=79 sw=2 sts=2 expandtab:
+%  vim:     set fenc=utf8 tw=79 sw=2 sts=2 et:
 %  file:    buccola-cv.tex
 %  author:  Brian Buccola
 %
@@ -12,30 +12,56 @@
 %            %
 %============%
 
-\documentclass[11pt,letterpaper]{article}
+\documentclass[11pt,letterpaper,twoside]{article}
 
 %=============================
 % Packages and basic settings
 %=============================
 
 \newcommand{\name}{Brian Buccola}
+\title{\Huge\bfseries \name}
+\author{\normalsize Curriculum Vit\ae}
+\date{\normalsize \today}
 
 % Font settings
 \usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage{microtype}
 \usepackage[sc,osf]{mathpazo}
+\usepackage{marvosym} % provides \Letter and \Telefon
 
 % Margins
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=1.5in,twoside]{geometry}
+
+% Section fonts
+\usepackage{titlesec}
+\usepackage{needspace}
+\titleformat*{\section}{\normalfont\large\bfseries}
+\titleformat*{\subsection}{\normalfont\normalsize\itshape}
+
+% Headers, footers, and page styles
+\usepackage{titleps}
+\newpagestyle{main}[\footnotesize]{%
+  \headrule
+  \sethead[Curriculum Vit\ae]
+          []
+          [Brian Buccola]
+          {Curriculum Vit\ae}
+          {}
+          {Brian Buccola}
+  \setfoot[]
+          [\thepage]
+          []
+          {}
+          {\thepage}
+          {}
+}
+\thispagestyle{plain}
+\pagestyle{main}
 
 % References
 \usepackage{natbib}
 \usepackage{bibentry}
-
-% Section fonts
-\usepackage{sectsty}
-\sectionfont{\needspace{3\baselineskip} \rmfamily\mdseries\scshape\large \sectionrule{0pt}{0pt}{-1ex}{1pt}}
-\subsectionfont{\needspace{2\baselineskip} \rmfamily\mdseries\scshape\normalsize}
 
 % Dates and times
 \usepackage{datetime}
@@ -53,46 +79,38 @@
 \usepackage{longtable} % normal \tabular environment does not allow page breaks
 \setlength{\LTpre}{0pt} % glue before longtable
 \addtolength{\LTpost}{0pt} % glue after longtable
-\usepackage{needspace}
 
 % Hyper links and PDF info
 \usepackage{hyperref}
 \hypersetup{%
   colorlinks  = true,
-  allcolors   = \linkcolor,
+  allcolors   = {\linkcolor},
   pdfauthor   = {\name},
   pdftitle    = {Curriculum Vitae -- \name},
   pdfsubject  = {Curriculum Vitae},
-  pdfkeywords = {\name, CV, linguistics, McGill},
+  pdfkeywords = {\name, CV, linguistics},
   pdfpagemode = UseNone
 }
 
-\hyphenation{Chic-ago}
-\hyphenation{work-shop}
-
 \setlength{\parindent}{0pt}
-
-\thispagestyle{plain}
-\pagestyle{plain}
 
 %========
 % Macros
 %========
 
-\newcommand{\datewidth}{0.16}
-\newcommand{\bodywidth}{0.81}
+\newcommand{\datewidth}{0.22}
+\newcommand{\bodywidth}{0.75}
 
 \definecolor{lightgray}{gray}{0.85}
-
 \newcommand{\myvrule}{\color{lightgray}\vrule width 1.0pt}
 
 \newcolumntype{L}{>{\raggedright}p{\datewidth\textwidth}}
 \newcolumntype{R}{p{\bodywidth\textwidth}}
 
 \newenvironment{cvsection}{%
-  \renewcommand{\arraystretch}{1.60}
+  \renewcommand{\arraystretch}{1.75}
   \begin{longtable}[l]{@{} L R @{}}
-  % Uncomment line below to add gray vrule between date and body.
+  % Comment line above and uncomment line below to add gray vrule between date and body.
   % \begin{longtable}{@{} L !{\myvrule} R @{}}
 }{%
   \end{longtable}
@@ -109,7 +127,7 @@
 }
 
 \newcommand{\award}[2]{%
-  #1~(#2). % award description and award amount
+  #1 (#2). % award description and award amount
 }
 
 %========%
@@ -123,36 +141,76 @@
 \bibliographystyle{plain}
 \nobibliography{/home/brian/documents/references/references}
 
-%=========================================
-% Title, personal info, research interests
-%=========================================
+\maketitle
 
-\begin{center}
-  {\Huge\scshape \name} \\[\baselineskip]
+\section*{Contact Information}
 
-  Curriculum Vit\ae \\
-  \today
-\end{center}
+\href{https://scholars.huji.ac.il/llcc/home}{Language, Logic, and Cognition
+  Center} \\
+\href{http://new.huji.ac.il/}{The Hebrew University of Jerusalem} \\
+Mount Scopus \\
+Jerusalem, Israel \\[\baselineskip]
+\begin{tabular}{@{}ll}
+  \Telefon & +972 58-745-6857 {\footnotesize (Israel)}, +1 312-945-6857 {\footnotesize (US Google Voice)} \\
+  \Letter & \href{mailto:brian.buccola@gmail.com}{\ttfamily
+    brian.buccola@gmail.com} \\
+  \Keyboard & \url{people.linguistics.mcgill.ca/~brian.buccola/}
+\end{tabular}
 
-\section*{Personal Information}
+\section*{Employment}
 
 \begin{cvsection}
-  Born & \formatdate{29}{12}{1985}, Metairie, Louisiana, USA \\
+  2015-- & \parbox[t]{\bodywidth\textwidth}{%
+    Postdoctoral fellow \\
+    \href{https://scholars.huji.ac.il/llcc/home}{Language, Logic, and Cognition Center} \\
+    \href{http://new.huji.ac.il/}{The Hebrew University of Jerusalem}
+  }
+\end{cvsection}
 
-  Citizenship & USA \\
+\section*{Education}
 
-  % Address & \parbox[t][5\baselineskip]{\bodywidth\textwidth}{%
-  %   \href{http://www.mcgill.ca/linguistics/}{Department of Linguistics} \\
-  %   \href{http://www.mcgill.ca/}{McGill University} \\
-  %   1085 Dr-Penfield \\
-  %   Montr\'{e}al, Qu\'{e}bec H3A 1A7 \\
-  %   Canada
-  % } \\
+\begin{cvsection}
+  2010--2015 & \parbox[t]{\bodywidth\textwidth}{%
+    Ph.D., Linguistics, \href{http://www.mcgill.ca/}{McGill University}. \\
+    {\footnotesize Dissertation: \textit{Maximality in the Semantics of
+        Modified Numerals}} \\
+    {\footnotesize Supervisory committee:
+      \href{http://people.linguistics.mcgill.ca/~luis.alonso-ovalle/}{Luis
+        Alonso-Ovalle} (co-supervisor),
+      \href{http://webpages.mcgill.ca/staff/group4/bschwa8/web/}{Bernhard
+        Schwarz} (co-supervisor),
+      \href{https://www.mcgill.ca/linguistics/people/faculty/wagner}{Michael
+        Wagner} (member)}
+  } \\
 
-  Email & \href{mailto:brian.buccola@gmail.com} {\ttfamily
-    brian.buccola@gmail.com} \\
+  2014 & \parbox[t]{\bodywidth\textwidth}{%
+    Visiting student, \href{http://www.mit.edu/}{Massachusetts Institute of
+      Technology}. \\
+    {\footnotesize Sponsor: \href{http://kaivonfintel.org/}{Kai von Fintel}}
+  } \\
 
-  Website & \url{http://people.linguistics.mcgill.ca/~brian.buccola/}
+  2009--2010 & Qualifying year, Linguistics,
+  \href{http://www.mcgill.ca/}{McGill University}. \\
+
+  2004--2008 & B.S., Mathematics, Honors College,
+  \href{http://www.luc.edu/}{Loyola University Chicago}. \\
+  & B.A., Classics, Honors College,
+  \href{http://www.luc.edu/}{Loyola University Chicago}. \\
+
+  1999--2004 & \href{http://www.jesuitnola.org/about/aboutindex.htm}{Jesuit
+  High School New Orleans}. \\
+\end{cvsection}
+
+\subsection*{Summer Schools}
+
+\begin{cvsection}
+  2013 & European Summer School in Logic, Language, and Information
+  (\href{http://esslli2013.de/}{ESSLLI 2013}), D\"{u}sseldorf, Germany,
+  \formatdatenoday{8}{2013}. \\
+
+  2012 & North American Summer School of Logic, Language, and Information
+  (\href{http://nasslli2012.com/}{NASSLLI 2012}), Austin, TX,
+  \formatdatenoday{6}{2012}. \\
 \end{cvsection}
 
 \section*{Research Interests}
@@ -168,63 +226,6 @@
 
   Phonology & Opacity; Optimality Theory; finite state phonology; generative
   capacity of phonological grammars. \\
-\end{cvsection}
-
-%===========
-% Main body
-%===========
-
-\section*{Employment}
-
-\begin{cvsection}
-  2015-- & Fellow at the \href{https://scholars.huji.ac.il/llcc/home}{Language,
-    Logic, and Cognition Center} of the \href{http://new.huji.ac.il/}{Hebrew
-    University of Jerusalem}.
-\end{cvsection}
-
-\section*{Education}
-
-\begin{cvsection}
-  2010--2015 & Ph.D., Linguistics, \href{http://www.mcgill.ca/}{McGill
-    University}.
-  \begin{flushleft}
-    Dissertation: \textit{Maximality in the Semantics of Modified Numerals} \\[1.5ex]
-    Supervisory committee:
-    \href{http://people.linguistics.mcgill.ca/~luis.alonso-ovalle/}{Luis
-      Alonso-Ovalle} (co-supervisor),
-    \href{http://webpages.mcgill.ca/staff/group4/bschwa8/web/}{Bernhard
-      Schwarz} (co-supervisor),
-    \href{https://www.mcgill.ca/linguistics/people/faculty/wagner}{Michael
-      Wagner} (member)
-  \end{flushleft} \\[-2ex]
-
-  2014 & Visiting student,
-  \href{http://www.mit.edu/}{Massachusetts Institute of Technology}. \\
-
-  2009--2010 & Qualifying year, Linguistics,
-  \href{http://www.mcgill.ca/}{McGill University}. \\
-
-  2004--2008 & B.S., Mathematics, Honors College,
-  \href{http://www.luc.edu/}{Loyola University Chicago}. \\
-
-  2004--2008 & B.A., Classics, Honors College,
-  \href{http://www.luc.edu/}{Loyola University Chicago}. \\
-
-  1999--2004 & \href{http://www.jesuitnola.org/about/aboutindex.htm}{Jesuit
-  High School New Orleans}. \\
-\end{cvsection}
-
-\vspace{-1ex}
-\subsection*{Summer Schools}
-
-\begin{cvsection}
-  2013 & European Summer School in Logic, Language, and Information
-  (\href{http://esslli2013.de/}{ESSLLI 2013}), D\"{u}sseldorf, Germany,
-  \formatdatenoday{8}{2013}. \\
-
-  2012 & North American Summer School of Logic, Language, and Information
-  (\href{http://nasslli2012.com/}{NASSLLI 2012}), Austin, TX,
-  \formatdatenoday{6}{2012}. \\
 \end{cvsection}
 
 \section*{Journal Articles}
@@ -271,6 +272,13 @@
   2013 & \null\bibentry{buccola2013mot}. \\
   2012 & \null\bibentry{buccola2012tom}. \\
   2011 & \null\bibentry{buccola2011tom}. \\
+\end{cvsection}
+
+\section*{Invited talks}
+
+\begin{cvsection}
+  (2015) & \null\bibentry{buccola2015tau}. \\
+  2015 & \null\bibentry{buccola2015lush}. \\
 \end{cvsection}
 
 % \section*{Non-Refereed Presentations}
@@ -369,7 +377,7 @@
     Societas Linguistica Europaea}. \\
 
   2012 {\footnotesize (joined)} & \href{http://www.crblm.ca/}{The Centre for
-    Research on Brain, Language and Music} (CRBLM, Montr\'{e}al, Canada). \\
+    Research on Brain, Language and Music}, Montr\'{e}al, Canada. \\
 
   2012 {\footnotesize (joined)} &
   \href{http://www.linguisticsociety.org/}{The Linguistic Society of America}. \\
@@ -383,20 +391,13 @@
 
 \section*{Teaching}
 
-\subsection*{As Instructor}
-
 \begin{cvsection}
   {\small Summer} 2014 & \course{Introduction to Linguistics (LING 201),
     instructor, McGill University}{introduction to the techniques of linguistic
-    analysis; topics covered include phonetics, phonology, morphology, syntax,
+    analysis; topics covered included phonetics, phonology, morphology, syntax,
     and semantics.}
   \\[0.10ex]
-\end{cvsection}
 
-\vspace{-1ex}
-\subsection*{As Teaching Assistant}
-
-\begin{cvsection}
   {\small Winter} 2014 & \taship{Phonetics (LING 330), teaching assistant,
   McGill University}{weekly lecture (2 hours/week); office hours; grade
   assignments, midterm exam, and final
@@ -465,11 +466,16 @@
 \subsection*{Other}
 
 \begin{cvsection}
-  2015 & Department publications manager (in charge of compiling a database of
-  department publications for 2014, in Bib\TeX\ format, and printing them for
-  the department's Annual Report), McGill University. \\
+  2015-- & Organizer (with
+  \href{http://amor.cms.hu-berlin.de/~haidaand/}{Andreas Haida}), LLCC
+  Semantics-Pragmatics Reading and Research Group, the Hebrew University of
+  Jerusalem. \\
 
-  2013-- & Organizing committee, Syntax-Semantics Research Group, McGill
+  2015 & Department publications manager (in charge of compiling a database of
+  department publications for 2014, in Bib\TeX\ format, for the department's
+  Annual Report), McGill University. \\
+
+  2013--2015 & Organizing committee, Syntax-Semantics Research Group, McGill
   University. \\
 
   2012--2014 & Co-editor, McGill Working Papers in Linguistics
@@ -509,28 +515,23 @@
 
 \section*{Languages}
 
-\vspace{1ex}
 \subsection*{Natural}
 
 \begin{cvsection}
   English & Native \\
   Italian & Fluent \\
-  French & Conversational; proficient in reading, writing \\
-  German & Conversational; proficient in reading, writing \\
+  French, German & Conversational; proficient in reading, writing \\
   Spanish & Working knowledge; research \\
-  Latin & Proficient in translation; research \\
-  Ancient Greek & Proficient in translation; research \\
+  Latin, Greek & Proficient in translation; research \\
 \end{cvsection}
 
-\vspace{-2ex}
 \subsection*{Formal}
 
 \begin{cvsection}
   Linux shell {\footnotesize (Bash)} & Advanced \\
-  \LaTeX/Bib\TeX{} & Proficient \\
-  HTML/CSS & Proficient \\
-  Haskell & Basic \\
-  Python & Basic \\
+  \LaTeX, Bib\TeX{} & Proficient \\
+  % HTML/CSS & Proficient \\
+  Haskell, Python & Basic \\
 \end{cvsection}
 
 \section*{Non-Academic Interests}
@@ -538,7 +539,7 @@
 \begin{list}{}{\leftmargin=0pt}
   \item History and philosophy of math and science.
   \item Early American blues (Delta) and jazz (New Orleans).
-  \item Tinkering with Linux, \LaTeX{}, and other computery things.
+  \item Linux, \LaTeX{}, and other computery things.
   \item Brewing beer, cooking.
   \item Chess, puzzles.
 \end{list}
