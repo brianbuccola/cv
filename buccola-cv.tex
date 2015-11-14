@@ -19,9 +19,9 @@
 %=============================
 
 \newcommand{\name}{Brian Buccola}
-\title{\Huge\bfseries \name}
-\author{\normalsize Curriculum Vit\ae}
-\date{\normalsize \today}
+% \title{\Huge\bfseries \name}
+% \author{\null}
+% \date{}
 
 % Font settings
 \usepackage[T1]{fontenc}
@@ -36,8 +36,9 @@
 % Section fonts
 \usepackage{titlesec}
 \usepackage{needspace}
-\titleformat*{\section}{\normalfont\large\bfseries}
-\titleformat*{\subsection}{\normalfont\normalsize\itshape}
+\titleformat*{\section}{\normalfont\Large\scshape}
+\titleformat*{\subsection}{\normalfont\large\bfseries}
+\titleformat*{\subsubsection}{\normalfont\normalsize\itshape}
 
 % Headers, footers, and page styles
 \usepackage{titleps}
@@ -56,7 +57,6 @@
           {\thepage}
           {}
 }
-\thispagestyle{plain}
 \pagestyle{main}
 
 % References
@@ -83,7 +83,7 @@
 % Hyper links and PDF info
 \usepackage{hyperref}
 \hypersetup{%
-  colorlinks  = true,
+  colorlinks  = false,
   allcolors   = {\linkcolor},
   pdfauthor   = {\name},
   pdftitle    = {Curriculum Vitae -- \name},
@@ -121,9 +121,9 @@
   \\ Instructor: #3.}}
 }
 
-\newcommand{\course}[2]{% course name and course description
+\newcommand{\course}[3]{% course name, course description, and class size
   \parbox[t]{\bodywidth\textwidth}{#1. \\ {\footnotesize Course description:
-      #2.}}
+      #2. Class size: #3.}}
 }
 
 \newcommand{\award}[2]{%
@@ -138,10 +138,18 @@
 
 \begin{document}
 
+\thispagestyle{empty}
+
 \bibliographystyle{plain}
 \nobibliography{/home/brian/documents/references/references}
 
-\maketitle
+% \vspace*{0.5\baselineskip}
+
+\begin{center}
+  {\Huge\bfseries Brian Buccola}
+\end{center}
+
+\vspace{1em}
 
 \section*{Contact Information}
 
@@ -189,16 +197,21 @@ Jerusalem, Israel \\[\baselineskip]
     {\footnotesize Sponsor: \href{http://kaivonfintel.org/}{Kai von Fintel}}
   } \\
 
-  2009--2010 & Qualifying year, Linguistics,
-  \href{http://www.mcgill.ca/}{McGill University}. \\
+  2009--2010 & \parbox[t]{\bodywidth\textwidth}{%
+    Qualifying Year Program, McGill University. \\
+    {\footnotesize (Permits strong candidates to make up gaps in their
+      background by taking appropriate undergraduate courses.)}
+  } \\
 
-  2004--2008 & B.S., Mathematics, Honors College,
-  \href{http://www.luc.edu/}{Loyola University Chicago}. \\
-  & B.A., Classics, Honors College,
-  \href{http://www.luc.edu/}{Loyola University Chicago}. \\
+  2004--2008 & \parbox[t]{\bodywidth\textwidth}{%
+    B.S., Mathematics, Honors College, \href{http://www.luc.edu/}{Loyola
+      University Chicago}. \\
+    B.A., Classics, Honors College, \href{http://www.luc.edu/}{Loyola
+      University Chicago}.
+  } \\
 
-  1999--2004 & \href{http://www.jesuitnola.org/about/aboutindex.htm}{Jesuit
-  High School New Orleans}. \\
+  % 1999--2004 & \href{http://www.jesuitnola.org/about/aboutindex.htm}{Jesuit
+  % High School New Orleans}. \\
 \end{cvsection}
 
 \subsection*{Summer Schools}
@@ -213,44 +226,48 @@ Jerusalem, Israel \\[\baselineskip]
   \formatdatenoday{6}{2012}. \\
 \end{cvsection}
 
-\section*{Research Interests}
+% \section*{Research Interests}
+
+% \begin{cvsection}
+%   General & Formal semantics, pragmatics; syntax-semantics interface;
+%   phonology; mathematical and computational linguistics; philosophy of
+%   language; logic. \\
+
+%   Semantics & Quantification; numeral and scalar modifiers; plurality;
+%   distributivity, collectivity; nonmonotonic inferences, ignorance inferences;
+%   type logical grammar. \\
+
+%   Phonology & Opacity; Optimality Theory; finite state phonology; generative
+%   capacity of phonological grammars. \\
+% \end{cvsection}
+
+\section*{Scholarship}
+
+\subsection*{Journal Articles}
 
 \begin{cvsection}
-  General & Formal semantics, pragmatics; syntax-semantics interface;
-  phonology; mathematical and computational linguistics; philosophy of
-  language; logic. \\
+  under review & \null\bibentry{buccola.spector2015}.
+  [\href{http://people.linguistics.mcgill.ca/~brian.buccola/files/buccola.spector2015maximality.pdf}{pdf}] \\
 
-  Semantics & Quantification; numeral and scalar modifiers; plurality;
-  distributivity, collectivity; nonmonotonic inferences, ignorance inferences;
-  type logical grammar. \\
-
-  Phonology & Opacity; Optimality Theory; finite state phonology; generative
-  capacity of phonological grammars. \\
-\end{cvsection}
-
-\section*{Journal Articles}
-
-\begin{cvsection}
   2012 & \null\bibentry{schwarz.etal2012}.
   [\href{http://dx.doi.org/10.3765/sp}{doi}] \\
 \end{cvsection}
 
-\section*{Manuscripts}
+% \section*{Manuscripts}
+
+% \begin{cvsection}
+%   in prep. & \null\bibentry{buccola2015gen}. \\
+
+%   2012 & \null\bibentry{buccola2012eval1}.
+%   [\href{http://people.linguistics.mcgill.ca/~brian.buccola/files/buccola2012eval1.pdf}{pdf}] \\
+% \end{cvsection}
+
+\subsection*{Proceedings Papers}
 
 \begin{cvsection}
-  in prep. & \null\bibentry{buccola2015gen}. \\
-
-  under review & \null\bibentry{buccola.spector2015}.
-  [\href{http://people.linguistics.mcgill.ca/~brian.buccola/files/buccola.spector2015maximality.pdf}{pdf}] \\
-
-  2012 & \null\bibentry{buccola2012eval1}.
-  [\href{http://people.linguistics.mcgill.ca/~brian.buccola/files/buccola2012eval1.pdf}{pdf}] \\
-\end{cvsection}
-
-\section*{Proceedings Papers}
-
-\begin{cvsection}
-  in prep. & \null\bibentry{buccola2015sub}. \\
+  in prep. & \null\bibentry{buccola2015sub}.
+  [\href{http://people.linguistics.mcgill.ca/~brian.buccola/files/buccola2015sub20.pdf}{pdf}]
+    {\footnotesize (handout)} \\
 
   2015 & \null\bibentry{buccola2015nels}.
   [\href{http://people.linguistics.mcgill.ca/~brian.buccola/files/buccola2015nels45.pdf}{pdf}] \\
@@ -259,22 +276,31 @@ Jerusalem, Israel \\[\baselineskip]
   [\href{http://people.linguistics.mcgill.ca/~brian.buccola/files/buccola2013fg.pdf}{pdf}] \\
 \end{cvsection}
 
-\section*{Refereed Presentations}
+\subsection*{Presentations}
+
+\subsubsection*{Peer-reviewed Conferences}
 
 \begin{cvsection}
   2015 & \null\bibentry{buccola2015subtalk}. \\
   2015 & \null\bibentry{buccola2015sle}. \\
   2014 & \null\bibentry{buccola2014nelsposter}. \\
-  2014 & \null\bibentry{buccola2014tom}. \\
   2014 & \null\bibentry{buccola.sonderegger2014lsa}. \\
   2013 & \null\bibentry{buccola.sonderegger2013phon}. \\
   2013 & \null\bibentry{buccola2013fgtalk}. \\
+\end{cvsection}
+
+\subsubsection*{Local Workshops}
+
+\begin{cvsection}
+  2014 & \null\bibentry{buccola2014tom}. \\
   2013 & \null\bibentry{buccola2013mot}. \\
   2012 & \null\bibentry{buccola2012tom}. \\
   2011 & \null\bibentry{buccola2011tom}. \\
 \end{cvsection}
 
-\section*{Invited talks}
+\clearpage
+
+\subsection*{Invited Talks}
 
 \begin{cvsection}
   (2015) & \null\bibentry{buccola2015tau}. \\
@@ -324,7 +350,7 @@ Jerusalem, Israel \\[\baselineskip]
 %   University, \formatdate{8}{6}{2011}. \\
 % \end{cvsection}
 
-\section*{Edited Volumes}
+\subsection*{Edited Volumes}
 
 \begin{cvsection}
   2014 & \null\bibentry{buccola.etal2014}.
@@ -333,127 +359,74 @@ Jerusalem, Israel \\[\baselineskip]
   [\href{https://www.mcgill.ca/mcgwpl/archives/volume-231-2013}{issue}]
 \end{cvsection}
 
-\section*{Awards}
-
-\begin{cvsection}
-  2014 & \award{Faculty of Arts Graduate Student Teaching Award}{\$500} \\
-
-  2014 & \award{Centre for Research on Brain, Language and Music (CRBLM)
-  Graduate Travel Award}{\$700} \\
-
-  2013 & \award{Graduate Student Travel Award, McGill University}{\$1,500} \\
-
-  2013 & \award{Lara Riente Memorial Prize in Linguistics, Department of
-  Linguistics, McGill University}{\$500} \\
-
-  2012--2013 & \award{Cremona Memorial Fellowship in Linguistics, Department of
-  Linguistics, McGill University}{\$8,479} \\
-
-  2012--2013 & \award{Graduate Excellence Fellowship, McGill
-  University}{\$7,000} \\
-
-  2012 & \award{NASSLLI full scholarship (tuition, fees, accommodation, travel
-  stipend)}{\$410} \\
-
-  2011--2012 & \award{Graduate Excellence Fellowship, McGill
-  University}{\$6,500} \\
-
-  2010--2011 & \award{Graduate Enrolment Recruitment Initiative, McGill
-  University}{\$5,000} \\
-
-  2010--2011 & \award{McCall MacBain Award, McGill University}{\$10,000} \\
-
-  2007--2008 & \award{National SMART Grant (Science and Mathematics Access to
-  Retain Talent), Loyola University Chicago}{\$4,000} \\
-
-  2004--2008 & \award{National Merit Finalist Scholarship, Loyola University
-  Chicago}{\textasciitilde\$100,000} \\
-\end{cvsection}
-
-\section*{Honors and Associations}
-
-\begin{cvsection}
-  2015 {\footnotesize (joined)} & \href{http://www.societaslinguistica.eu/}{The
-    Societas Linguistica Europaea}. \\
-
-  2012 {\footnotesize (joined)} & \href{http://www.crblm.ca/}{The Centre for
-    Research on Brain, Language and Music}, Montr\'{e}al, Canada. \\
-
-  2012 {\footnotesize (joined)} &
-  \href{http://www.linguisticsociety.org/}{The Linguistic Society of America}. \\
-
-  2008 {\footnotesize (inducted)} & \href{http://www.pbk.org/}{Phi Beta Kappa}. \\
-
-  2004 & \href{http://www.nationalmerit.org/}{National Merit Scholar}. \\
-
-  1999 {\footnotesize (accepted)} & \href{http://www.mensa.org/}{Mensa}. \\
-\end{cvsection}
-
 \section*{Teaching}
 
+\subsection*{As Instructor}
+
 \begin{cvsection}
-  {\small Summer} 2014 & \course{Introduction to Linguistics (LING 201),
-    instructor, McGill University}{introduction to the techniques of linguistic
-    analysis; topics covered included phonetics, phonology, morphology, syntax,
-    and semantics.}
-  \\[0.10ex]
-
-  {\small Winter} 2014 & \taship{Phonetics (LING 330), teaching assistant,
-  McGill University}{weekly lecture (2 hours/week); office hours; grade
-  assignments, midterm exam, and final
-  exam}{\href{http://people.linguistics.mcgill.ca/~morgan/}{Morgan Sonderegger}}
-  \\[0.10ex]
-
-  {\small Fall} 2013 & \taship{Semantics (LING 360), teaching assistant, McGill
-  University}{three lectures; office hours; grade assignments, midterm exam, and
-  final exam}{\href{http://webpages.mcgill.ca/staff/group3/bgillo/web/}{Brendan
-  Gillon}}
-  \\[0.10ex]
-
-  {\small Winter} 2013 & \taship{Phonetics (LING 330), teaching
-  assistant, McGill University}{weekly lecture (2 hours/week); office hours;
-  grade assignments, midterm exam, and final
-  exam}{\href{http://people.linguistics.mcgill.ca/~morgan/}{Morgan Sonderegger}}
-  \\[0.10ex]
-
-  {\small Fall} 2012 & \taship{Semantics (LING 360), teaching assistant,
-  McGill University}{two lectures; office hours; grade assignments, midterm
-  exam, and final
-  exam}{\href{http://webpages.mcgill.ca/staff/group3/bgillo/web/}{Brendan
-  Gillon}}
-  \\[0.10ex]
-
-  {\small Winter} 2012 & \taship{Phonetics (LING 330), teaching
-  assistant, McGill University}{weekly lecture (2 hours/week); office hours;
-  grade assignments, midterm exam, and final
-  exam}{\href{http://webpages.mcgill.ca/staff/group3/hgoad/web/}{Heather Goad}}
-  \\[0.10ex]
-
-  {\small Fall} 2011 & \taship{Phonology I (LING 331), teaching
-  assistant, McGill University}{weekly lecture (1 hour/week); office hours;
-  grade quizzes, assignments, midterm exam, and final
-  exam}{\href{http://tobinskinner.com/}{Tobin Skinner}}
-  \\[0.10ex]
-
-  {\small Winter} 2011 & \taship{Phonetics (LING 330), teaching assistant,
-  McGill University}{weekly lecture (2 hours/week); office hours; grade
-  quizzes, assignments, midterm exams, and final
-  exam}{\href{http://www.mun.ca/linguistics/people/faculty/saramackenzie.php}{Sara
-  Mackenzie}}
-  \\[0.10ex]
-
-  {\small Fall} 2010 & \taship{Intro to Linguistics (LING 201), teaching
-  assistant, McGill University}{weekly lecture (2 hours/week); office hours;
-  grade quizzes, assignments, midterm exam, and final
-  exam}{\href{https://sites.google.com/site/tanyaslavin/}{Tanya Slavin}}
-  \\[0.10ex]
-
-  {\small Fall} 2010 & \taship{Neuroscience of Language (LING 370),
-  grader, McGill University}{grade assignments, midterm exam, and final
-  exam}{Isabelle Deschamps,
-  \href{http://www.ucl.ac.uk/pals/people/profiles/academic-staff/andrea-santi}{Andrea
-    Santi}} \\
+  {\small Summer} 2014 & \course{Introduction to Linguistics (LING 201), McGill
+    University}{introduction to the techniques of linguistic analysis; topics
+    covered included phonetics, phonology, morphology, syntax, and
+    semantics}{30}.
 \end{cvsection}
+
+\subsection*{As Teaching Assistant}
+
+\begin{cvsection}
+  {\small Winter} 2014 & \taship{Phonetics (LING 330), McGill
+    University}{weekly lecture (2 hours/week); office hours; grade assignments,
+    midterm exam, and final
+    exam}{\href{http://people.linguistics.mcgill.ca/~morgan/}{Morgan
+      Sonderegger}} \\[0.10ex]
+
+  {\small Fall} 2013 & \taship{Semantics (LING 360), McGill University}{three
+    lectures; office hours; grade assignments, midterm exam, and final
+    exam}{\href{http://webpages.mcgill.ca/staff/group3/bgillo/web/}{Brendan
+      Gillon}} \\[0.10ex]
+
+  {\small Winter} 2013 & \taship{Phonetics (LING 330), McGill
+    University}{weekly lecture (2 hours/week); office hours; grade assignments,
+    midterm exam, and final
+    exam}{\href{http://people.linguistics.mcgill.ca/~morgan/}{Morgan
+      Sonderegger}} \\[0.10ex]
+
+  {\small Fall} 2012 & \taship{Semantics (LING 360), McGill University}{two
+    lectures; office hours; grade assignments, midterm exam, and final
+    exam}{\href{http://webpages.mcgill.ca/staff/group3/bgillo/web/}{Brendan
+      Gillon}} \\[0.10ex]
+
+  {\small Winter} 2012 & \taship{Phonetics (LING 330), McGill
+    University}{weekly lecture (2 hours/week); office hours; grade assignments,
+    midterm exam, and final
+    exam}{\href{http://webpages.mcgill.ca/staff/group3/hgoad/web/}{Heather
+      Goad}} \\[0.10ex]
+
+  {\small Fall} 2011 & \taship{Phonology I (LING 331), McGill
+    University}{weekly lecture (1 hour/week); office hours; grade quizzes,
+    assignments, midterm exam, and final
+    exam}{\href{http://tobinskinner.com/}{Tobin Skinner}} \\[0.10ex]
+
+  {\small Winter} 2011 & \taship{Phonetics (LING 330), McGill
+    University}{weekly lecture (2 hours/week); office hours; grade quizzes,
+    assignments, midterm exams, and final
+    exam}{\href{http://www.mun.ca/linguistics/people/faculty/saramackenzie.php}{Sara
+      Mackenzie}} \\[0.10ex]
+
+  {\small Fall} 2010 & \taship{Intro to Linguistics (LING 201), McGill
+    University}{weekly lecture (2 hours/week); office hours; grade quizzes,
+    assignments, midterm exam, and final
+    exam}{\href{https://sites.google.com/site/tanyaslavin/}{Tanya Slavin}}
+  \\[0.10ex]
+
+  {\small Fall} 2010 & \taship{Neuroscience of Language (LING 370), McGill
+    University}{grade assignments, midterm exam, and final
+    exam}{\href{http://speechneurolab.ca/en/lab-members/103-isabelle-deschamps-phd}{Isabelle
+      Deschamps},
+    \href{http://www.ucl.ac.uk/pals/people/profiles/academic-staff/andrea-santi}{Andrea
+      Santi}} \\
+\end{cvsection}
+
+\clearpage
 
 \section*{Service}
 
@@ -513,35 +486,97 @@ Jerusalem, Israel \\[\baselineskip]
   (\href{https://blogs.mcgill.ca/mcling/}{McLing}). \\
 \end{cvsection}
 
-\section*{Languages}
-
-\subsection*{Natural}
+\section*{Awards}
 
 \begin{cvsection}
-  English & Native \\
-  Italian & Fluent \\
-  French, German & Conversational; proficient in reading, writing \\
-  Spanish & Working knowledge; research \\
-  Latin, Greek & Proficient in translation; research \\
+  2014 & \parbox[t]{\bodywidth\textwidth}{%
+    \award{Faculty of Arts Graduate Student Teaching Award}{\$500} \\
+    {\footnotesize University-wide, nomination-only award, which ``recognizes
+      outstanding teaching in the Faculty by graduate students.''}
+  } \\
+
+  2014 & \award{Centre for Research on Brain, Language and Music (CRBLM)
+  Graduate Travel Award}{\$700} \\
+
+  2013 & \award{Graduate Student Travel Award, McGill University}{\$1,500} \\
+
+  2013 & \award{Lara Riente Memorial Prize in Linguistics, Department of
+  Linguistics, McGill University}{\$500} \\
+
+  2012--2013 & \award{Cremona Memorial Fellowship in Linguistics, Department of
+  Linguistics, McGill University}{\$8,479} \\
+
+  2012--2013 & \award{Graduate Excellence Fellowship, McGill
+  University}{\$7,000} \\
+
+  2012 & \award{NASSLLI full scholarship (tuition, fees, accommodation, travel
+  stipend)}{\$410} \\
+
+  2011--2012 & \award{Graduate Excellence Fellowship, McGill
+  University}{\$6,500} \\
+
+  2010--2011 & \award{Graduate Enrolment Recruitment Initiative, McGill
+  University}{\$5,000} \\
+
+  2010--2011 & \award{McCall MacBain Award, McGill University}{\$10,000} \\
+
+  2007--2008 & \award{National SMART Grant (Science and Mathematics Access to
+  Retain Talent), Loyola University Chicago}{\$4,000} \\
+
+  2004--2008 & \award{National Merit Finalist Scholarship, Loyola University
+  Chicago}{\textasciitilde\$100,000} \\
 \end{cvsection}
 
-\subsection*{Formal}
+\section*{Honors and Associations}
 
 \begin{cvsection}
-  Linux shell {\footnotesize (Bash)} & Advanced \\
-  \LaTeX, Bib\TeX{} & Proficient \\
-  % HTML/CSS & Proficient \\
-  Haskell, Python & Basic \\
+  2015 {\footnotesize (joined)} & \href{http://www.societaslinguistica.eu/}{The
+    Societas Linguistica Europaea}. \\
+
+  2012 {\footnotesize (joined)} & \href{http://www.crblm.ca/}{The Centre for
+    Research on Brain, Language and Music}, Montr\'{e}al, Canada. \\
+
+  2012 {\footnotesize (joined)} &
+  \href{http://www.linguisticsociety.org/}{The Linguistic Society of America}. \\
+
+  2008 {\footnotesize (inducted)} & \href{http://www.pbk.org/}{Phi Beta Kappa}. \\
+
+  2004 & \href{http://www.nationalmerit.org/}{National Merit Scholar}. \\
+
+  1999 {\footnotesize (accepted)} & \href{http://www.mensa.org/}{Mensa}. \\
 \end{cvsection}
 
-\section*{Non-Academic Interests}
+% \section*{Languages}
 
-\begin{list}{}{\leftmargin=0pt}
-  \item History and philosophy of math and science.
-  \item Early American blues (Delta) and jazz (New Orleans).
-  \item Linux, \LaTeX{}, and other computery things.
-  \item Brewing beer, cooking.
-  \item Chess, puzzles.
-\end{list}
+% \subsection*{Natural}
+
+% \begin{cvsection}
+%   English & Native \\
+%   Italian & Fluent \\
+%   French, German & Conversational; proficient in reading, writing \\
+%   Spanish & Working knowledge; research \\
+%   Latin, Greek & Proficient in translation; research \\
+% \end{cvsection}
+
+% \subsection*{Formal}
+
+% \begin{cvsection}
+%   Linux shell {\footnotesize (Bash)} & Advanced \\
+%   \LaTeX, Bib\TeX{} & Proficient \\
+%   % HTML/CSS & Proficient \\
+%   Haskell, Python & Basic \\
+% \end{cvsection}
+
+% \section*{Non-Academic Interests}
+
+% \begin{list}{}{\leftmargin=0pt}
+%   \item History and philosophy of math and science.
+%   \item Early American blues (Delta) and jazz (New Orleans).
+%   \item Linux, \LaTeX{}, and other computery things.
+%   \item Brewing beer, cooking.
+%   \item Chess, puzzles.
+% \end{list}
+
+\null\hfill {\footnotesize Last updated: \today}
 
 \end{document}
