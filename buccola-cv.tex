@@ -71,8 +71,8 @@
 \newcommand{\formatdatenoday}[2]{\mydatenoday\formatdate{0}{#1}{#2}}
 
 % Colors
-\usepackage[dvipsnames]{xcolor}
-\newcommand{\linkcolor}{Blue}
+\usepackage[svgnames]{xcolor}
+\newcommand{\linkcolor}{NavyBlue}
 
 % Packages for CV environment
 \usepackage{array} % required for defining newcolumntype with custom vrule
@@ -83,7 +83,7 @@
 % Hyper links and PDF info
 \usepackage{hyperref}
 \hypersetup{%
-  colorlinks  = false,
+  colorlinks  = true,
   allcolors   = {\linkcolor},
   pdfauthor   = {\name},
   pdftitle    = {Curriculum Vitae -- \name},
