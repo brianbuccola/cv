@@ -70,10 +70,6 @@
 \newdateformat{mydatenoday}{\shortmonthname[\THEMONTH]\ \THEYEAR}
 \newcommand{\formatdatenoday}[2]{\mydatenoday\formatdate{0}{#1}{#2}}
 
-% Colors
-\usepackage[svgnames]{xcolor}
-\newcommand{\linkcolor}{NavyBlue}
-
 % Packages for CV environment
 \usepackage{array} % required for defining newcolumntype with custom vrule
 \usepackage{longtable} % normal \tabular environment does not allow page breaks
@@ -83,8 +79,7 @@
 % Hyper links and PDF info
 \usepackage{hyperref}
 \hypersetup{%
-  colorlinks  = true,
-  allcolors   = {\linkcolor},
+  colorlinks  = false,
   pdfauthor   = {\name},
   pdftitle    = {Curriculum Vitae -- \name},
   pdfsubject  = {Curriculum Vitae},
@@ -100,9 +95,6 @@
 
 \newcommand{\datewidth}{0.22}
 \newcommand{\bodywidth}{0.75}
-
-\definecolor{lightgray}{gray}{0.85}
-\newcommand{\myvrule}{\color{lightgray}\vrule width 1.0pt}
 
 \newcolumntype{L}{>{\raggedright}p{\datewidth\textwidth}}
 \newcolumntype{R}{p{\bodywidth\textwidth}}
@@ -153,16 +145,15 @@
 
 \section*{Contact Information}
 
-\href{https://scholars.huji.ac.il/llcc/home}{Language, Logic, and Cognition
-  Center} \\
-\href{http://new.huji.ac.il/}{The Hebrew University of Jerusalem} \\
+Language, Logic, and Cognition Center \\
+The Hebrew University of Jerusalem \\
 Mount Scopus \\
 Jerusalem, Israel \\[\baselineskip]
 \begin{tabular}{@{}ll}
   \Telefon & +972 58-745-6857 {\footnotesize (Israel)}, +1 312-945-6857 {\footnotesize (US Google Voice)} \\
   \Letter & \href{mailto:brian.buccola@gmail.com}{\ttfamily
     brian.buccola@gmail.com} \\
-  \Keyboard & \url{http://brianbuccola.com/}
+  \Keyboard & \url{http://brianbuccola.com}
 \end{tabular}
 
 \section*{Employment}
@@ -170,8 +161,8 @@ Jerusalem, Israel \\[\baselineskip]
 \begin{cvsection}
   2015-- & \parbox[t]{\bodywidth\textwidth}{%
     Postdoctoral fellow \\
-    \href{https://scholars.huji.ac.il/llcc/home}{Language, Logic, and Cognition Center} \\
-    \href{http://new.huji.ac.il/}{The Hebrew University of Jerusalem}
+    Language, Logic, and Cognition Center \\
+    The Hebrew University of Jerusalem
   }
 \end{cvsection}
 
@@ -179,22 +170,16 @@ Jerusalem, Israel \\[\baselineskip]
 
 \begin{cvsection}
   2010--2015 & \parbox[t]{\bodywidth\textwidth}{%
-    Ph.D., Linguistics, \href{http://www.mcgill.ca/}{McGill University}. \\
+    Ph.D., Linguistics, McGill University. \\
     {\footnotesize Dissertation: \textit{Maximality in the Semantics of
         Modified Numerals}} \\
-    {\footnotesize Supervisory committee:
-      \href{http://people.linguistics.mcgill.ca/~luis.alonso-ovalle/}{Luis
-        Alonso-Ovalle} (co-supervisor),
-      \href{http://webpages.mcgill.ca/staff/group4/bschwa8/web/}{Bernhard
-        Schwarz} (co-supervisor),
-      \href{https://www.mcgill.ca/linguistics/people/faculty/wagner}{Michael
-        Wagner} (member)}
+    {\footnotesize Supervisory committee: Luis Alonso-Ovalle (co-supervisor),
+      Bernhard Schwarz (co-supervisor), Michael Wagner (member)}
   } \\
 
   2014 & \parbox[t]{\bodywidth\textwidth}{%
-    Visiting student, \href{http://www.mit.edu/}{Massachusetts Institute of
-      Technology}. \\
-    {\footnotesize Sponsor: \href{http://kaivonfintel.org/}{Kai von Fintel}}
+    Visiting student, Massachusetts Institute of Technology. \\
+    {\footnotesize Sponsor: Kai von Fintel}
   } \\
 
   2009--2010 & \parbox[t]{\bodywidth\textwidth}{%
@@ -204,25 +189,22 @@ Jerusalem, Israel \\[\baselineskip]
   } \\
 
   2004--2008 & \parbox[t]{\bodywidth\textwidth}{%
-    B.S., Mathematics, Honors College, \href{http://www.luc.edu/}{Loyola
-      University Chicago}. \\
-    B.A., Classics, Honors College, \href{http://www.luc.edu/}{Loyola
-      University Chicago}.
+    B.S., Mathematics, Honors College, Loyola University Chicago. \\
+    B.A., Classics, Honors College, Loyola University Chicago.
   } \\
 
-  % 1999--2004 & \href{http://www.jesuitnola.org/about/aboutindex.htm}{Jesuit
-  % High School New Orleans}. \\
+  % 1999--2004 & Jesuit High School New Orleans. \\
 \end{cvsection}
 
 \subsection*{Summer Schools}
 
 \begin{cvsection}
-  2013 & European Summer School in Logic, Language, and Information
-  (\href{http://esslli2013.de/}{ESSLLI 2013}), D\"{u}sseldorf, Germany,
+  2013 & European Summer School in Logic, Language, and Information (ESSLLI
+  2013), D\"{u}sseldorf, Germany,
   \formatdatenoday{8}{2013}. \\
 
   2012 & North American Summer School of Logic, Language, and Information
-  (\href{http://nasslli2012.com/}{NASSLLI 2012}), Austin, TX,
+  (NASSLLI 2012), Austin, TX,
   \formatdatenoday{6}{2012}. \\
 \end{cvsection}
 
@@ -246,34 +228,19 @@ Jerusalem, Israel \\[\baselineskip]
 \subsection*{Journal Articles}
 
 \begin{cvsection}
-  under review & \null\bibentry{buccola.spector2015}.
-  [\href{http://brianbuccola.com/files/buccola.spector2015maximality.pdf}{pdf}] \\
+  under review & \null\bibentry{buccola.spector2015}. \\
 
-  2012 & \null\bibentry{schwarz.etal2012}.
-  [\href{http://dx.doi.org/10.3765/sp}{doi}] \\
+  2012 & \null\bibentry{schwarz.etal2012}. \\
 \end{cvsection}
-
-% \section*{Manuscripts}
-
-% \begin{cvsection}
-%   in prep. & \null\bibentry{buccola2015gen}. \\
-
-%   2012 & \null\bibentry{buccola2012eval1}.
-%   [\href{http://brianbuccola.com/files/buccola2012eval1.pdf}{pdf}] \\
-% \end{cvsection}
 
 \subsection*{Proceedings Papers}
 
 \begin{cvsection}
-  in prep. & \null\bibentry{buccola2015sub}.
-  [\href{http://brianbuccola.com/files/buccola2015sub20.pdf}{pdf}]
-  {\footnotesize (handout)} \\
+  in prep. & \null\bibentry{buccola2015sub}. \\
 
-  2015 & \null\bibentry{buccola2015nels}.
-  [\href{http://brianbuccola.com/files/buccola2015nels45.pdf}{pdf}] \\
+  2015 & \null\bibentry{buccola2015nels}. \\
 
-  2013 & \null\bibentry{buccola2013fg}.
-  [\href{http://brianbuccola.com/files/buccola2013fg.pdf}{pdf}] \\
+  2013 & \null\bibentry{buccola2013fg}. \\
 \end{cvsection}
 
 \subsection*{Presentations}
@@ -353,10 +320,8 @@ Jerusalem, Israel \\[\baselineskip]
 \subsection*{Edited Volumes}
 
 \begin{cvsection}
-  2014 & \null\bibentry{buccola.etal2014}.
-  [\href{https://www.mcgill.ca/mcgwpl/archives/volume-241-2014}{issue}] \\
+  2014 & \null\bibentry{buccola.etal2014}. \\
   2013 & \null\bibentry{mckillen.buccola2013}.
-  [\href{https://www.mcgill.ca/mcgwpl/archives/volume-231-2013}{issue}]
 \end{cvsection}
 
 \section*{Teaching}
@@ -376,54 +341,44 @@ Jerusalem, Israel \\[\baselineskip]
   {\small Winter} 2014 & \taship{Phonetics (LING 330), McGill
     University}{weekly lecture (2 hours/week); office hours; grade assignments,
     midterm exam, and final
-    exam}{\href{http://people.linguistics.mcgill.ca/~morgan/}{Morgan
-      Sonderegger}} \\[0.10ex]
+    exam}{Morgan Sonderegger} \\[0.10ex]
 
   {\small Fall} 2013 & \taship{Semantics (LING 360), McGill University}{three
     lectures; office hours; grade assignments, midterm exam, and final
-    exam}{\href{http://webpages.mcgill.ca/staff/group3/bgillo/web/}{Brendan
-      Gillon}} \\[0.10ex]
+    exam}{Brendan Gillon} \\[0.10ex]
 
   {\small Winter} 2013 & \taship{Phonetics (LING 330), McGill
     University}{weekly lecture (2 hours/week); office hours; grade assignments,
     midterm exam, and final
-    exam}{\href{http://people.linguistics.mcgill.ca/~morgan/}{Morgan
-      Sonderegger}} \\[0.10ex]
+    exam}{Morgan Sonderegger} \\[0.10ex]
 
   {\small Fall} 2012 & \taship{Semantics (LING 360), McGill University}{two
     lectures; office hours; grade assignments, midterm exam, and final
-    exam}{\href{http://webpages.mcgill.ca/staff/group3/bgillo/web/}{Brendan
-      Gillon}} \\[0.10ex]
+    exam}{Brendan Gillon} \\[0.10ex]
 
   {\small Winter} 2012 & \taship{Phonetics (LING 330), McGill
     University}{weekly lecture (2 hours/week); office hours; grade assignments,
     midterm exam, and final
-    exam}{\href{http://webpages.mcgill.ca/staff/group3/hgoad/web/}{Heather
-      Goad}} \\[0.10ex]
+    exam}{Heather Goad} \\[0.10ex]
 
   {\small Fall} 2011 & \taship{Phonology I (LING 331), McGill
     University}{weekly lecture (1 hour/week); office hours; grade quizzes,
     assignments, midterm exam, and final
-    exam}{\href{http://tobinskinner.com/}{Tobin Skinner}} \\[0.10ex]
+    exam}{Tobin Skinner} \\[0.10ex]
 
   {\small Winter} 2011 & \taship{Phonetics (LING 330), McGill
     University}{weekly lecture (2 hours/week); office hours; grade quizzes,
     assignments, midterm exams, and final
-    exam}{\href{http://www.mun.ca/linguistics/people/faculty/saramackenzie.php}{Sara
-      Mackenzie}} \\[0.10ex]
+    exam}{Sara Mackenzie} \\[0.10ex]
 
   {\small Fall} 2010 & \taship{Intro to Linguistics (LING 201), McGill
     University}{weekly lecture (2 hours/week); office hours; grade quizzes,
     assignments, midterm exam, and final
-    exam}{\href{https://sites.google.com/site/tanyaslavin/}{Tanya Slavin}}
-  \\[0.10ex]
+    exam}{Tanya Slavin} \\[0.10ex]
 
   {\small Fall} 2010 & \taship{Neuroscience of Language (LING 370), McGill
     University}{grade assignments, midterm exam, and final
-    exam}{\href{http://speechneurolab.ca/en/lab-members/103-isabelle-deschamps-phd}{Isabelle
-      Deschamps},
-    \href{http://www.ucl.ac.uk/pals/people/profiles/academic-staff/andrea-santi}{Andrea
-      Santi}} \\
+    exam}{Isabelle Deschamps, Andrea Santi} \\
 \end{cvsection}
 
 \clearpage
@@ -439,10 +394,8 @@ Jerusalem, Israel \\[\baselineskip]
 \subsection*{Other}
 
 \begin{cvsection}
-  2015-- & Organizer (with
-  \href{http://amor.cms.hu-berlin.de/~haidaand/}{Andreas Haida}), LLCC
-  Semantics-Pragmatics Reading and Research Group, the Hebrew University of
-  Jerusalem. \\
+  2015-- & Organizer (with Andreas Haida), LLCC Semantics-Pragmatics Reading
+  and Research Group, the Hebrew University of Jerusalem. \\
 
   2015 & Department publications manager (in charge of compiling a database of
   department publications for 2014, in Bib\TeX\ format, for the department's
@@ -451,12 +404,10 @@ Jerusalem, Israel \\[\baselineskip]
   2013--2015 & Organizing committee, Syntax-Semantics Research Group, McGill
   University. \\
 
-  2012--2014 & Co-editor, McGill Working Papers in Linguistics
-  (\href{http://www.mcgill.ca/mcgwpl/}{McGWPL}). \\
+  2012--2014 & Co-editor, McGill Working Papers in Linguistics (McGWPL). \\
 
   2013 & Organizing committee, Exploring the Interfaces 2: Implicatures,
-  Alternatives, and the Semantics-Pragmatics Interface
-  (\href{https://sites.google.com/site/eti2pragmatics/}{ETI~2}), McGill
+  Alternatives, and the Semantics-Pragmatics Interface (ETI~2), McGill
   University, \shortmonthname[4]--\formatdatenoday{6}{2013}. \\
 
   % 2013 & Session chair, Toronto-Ottawa-Montreal (TOM) semantics workshop,
@@ -465,16 +416,14 @@ Jerusalem, Israel \\[\baselineskip]
   % 2013 & Student host for invited colloquium speaker Kai von Fintel, McGill
   % University, \formatdatenoday{1}{2013}. \\
 
-  % 2012 & Bib\TeX{} workshop (with
-  % \href{http://people.linguistics.mcgill.ca/~alanah.mckillen/}{Alanah
-  % McKillen}), McGill University, \formatdate{20}{8}{2012}. \\
+  % 2012 & Bib\TeX{} workshop (with Alanah McKillen), McGill University,
+  % \formatdate{20}{8}{2012}. \\
 
   2012 & Graduate student representative for syntax job hire, McGill
   University, \shortmonthname[5]--\formatdatenoday{6}{2012}. \\
 
-  % 2012 & \LaTeX{} workshop (with
-  % \href{http://people.linguistics.mcgill.ca/~alanah.mckillen/}{Alanah
-  % McKillen}), McGill University, \formatdate{2}{2}{2012}. \\
+  % 2012 & \LaTeX{} workshop (with Alanah McKillen), McGill University,
+  % \formatdate{2}{2}{2012}. \\
 
   % 2012 & Abstract reviewer for McCCLU (the McGill Canadian Conference for
   % Linguistics Undergraduates), \formatdatenoday{1}{2012}. \\
@@ -482,8 +431,7 @@ Jerusalem, Israel \\[\baselineskip]
   % 2011 & Student host for invited colloquium speaker Rick Nouwen, McGill
   % University, \formatdatenoday{12}{2011}. \\
 
-  2011--2012 & Co-editor, McGill Linguistics Blog
-  (\href{https://blogs.mcgill.ca/mcling/}{McLing}). \\
+  2011--2012 & Co-editor, McGill Linguistics Blog (McLing). \\
 \end{cvsection}
 
 \section*{Awards}
@@ -530,20 +478,18 @@ Jerusalem, Israel \\[\baselineskip]
 \section*{Honors and Associations}
 
 \begin{cvsection}
-  2015 {\footnotesize (joined)} & \href{http://www.societaslinguistica.eu/}{The
-    Societas Linguistica Europaea}. \\
+  2015 {\footnotesize (joined)} & The Societas Linguistica Europaea. \\
 
-  2012 {\footnotesize (joined)} & \href{http://www.crblm.ca/}{The Centre for
-    Research on Brain, Language and Music}, Montr\'{e}al, Canada. \\
+  2012 {\footnotesize (joined)} & The Centre for Research on Brain, Language
+  and Music, Montr\'{e}al, Canada. \\
 
-  2012 {\footnotesize (joined)} &
-  \href{http://www.linguisticsociety.org/}{The Linguistic Society of America}. \\
+  2012 {\footnotesize (joined)} & The Linguistic Society of America. \\
 
-  2008 {\footnotesize (inducted)} & \href{http://www.pbk.org/}{Phi Beta Kappa}. \\
+  2008 {\footnotesize (inducted)} & Phi Beta Kappa. \\
 
-  2004 & \href{http://www.nationalmerit.org/}{National Merit Scholar}. \\
+  2004 & National Merit Scholar. \\
 
-  1999 {\footnotesize (accepted)} & \href{http://www.mensa.org/}{Mensa}. \\
+  1999 {\footnotesize (accepted)} & Mensa. \\
 \end{cvsection}
 
 \section*{Languages}
