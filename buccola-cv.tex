@@ -57,8 +57,11 @@
 \pagestyle{main}
 
 % References
-\usepackage{natbib}
-\usepackage{bibentry}
+\usepackage[backend=biber,style=numeric]{biblatex}
+\addbibresource{/home/brian/repos/references/references.bib}
+%% Remove default quotes around title.
+\DeclareFieldFormat[article,inproceedings,thesis,unpublished]{citetitle}{#1}
+\DeclareFieldFormat[article,inproceedings,thesis,unpublished]{title}{#1}
 
 % Packages for CV environment
 \usepackage{array} % required for defining newcolumntype with custom vrule
@@ -121,9 +124,6 @@
 \begin{document}
 
 \thispagestyle{empty}
-
-\bibliographystyle{plain}
-\nobibliography{/home/brian/documents/references/references}
 
 \begin{center}
   {\Huge\bfseries Brian Buccola}
@@ -202,19 +202,19 @@
 \subsection*{Journal Articles}
 
 \begin{cvsection}
-  under review & \null\bibentry{buccola.spector2015}.\\
+  under review & \fullcite{buccola.spector2015}.\\
 
-  2012 & \null\bibentry{schwarz.etal2012}.\\
+  2012 & \fullcite{schwarz.etal2012}.\\
 \end{cvsection}
 
 \subsection*{Proceedings Papers}
 
 \begin{cvsection}
-  in prep. & \null\bibentry{buccola2015sub}.\\
+  in prep. & \fullcite{buccola2015sub}.\\
 
-  2015 & \null\bibentry{buccola2015nels}.\\
+  2015 & \fullcite{buccola2015nels}.\\
 
-  2013 & \null\bibentry{buccola2013fg}.\\
+  2013 & \fullcite{buccola2013fg}.\\
 \end{cvsection}
 
 \subsection*{Presentations}
@@ -222,21 +222,21 @@
 \subsubsection*{Peer-reviewed Conferences}
 
 \begin{cvsection}
-  2015 & \null\bibentry{buccola2015subtalk}.\\
-  2015 & \null\bibentry{buccola2015sle}.\\
-  2014 & \null\bibentry{buccola2014nelsposter}.\\
-  2014 & \null\bibentry{buccola.sonderegger2014lsa}.\\
-  2013 & \null\bibentry{buccola.sonderegger2013phon}.\\
-  2013 & \null\bibentry{buccola2013fgtalk}.\\
+  2015 & \fullcite{buccola2015subtalk}.\\
+  2015 & \fullcite{buccola2015sle}.\\
+  2014 & \fullcite{buccola2014nelsposter}.\\
+  2014 & \fullcite{buccola.sonderegger2014lsa}.\\
+  2013 & \fullcite{buccola.sonderegger2013phon}.\\
+  2013 & \fullcite{buccola2013fgtalk}.\\
 \end{cvsection}
 
 \subsubsection*{Local Workshops}
 
 \begin{cvsection}
-  2014 & \null\bibentry{buccola2014tom}.\\
-  2013 & \null\bibentry{buccola2013mot}.\\
-  2012 & \null\bibentry{buccola2012tom}.\\
-  2011 & \null\bibentry{buccola2011tom}.\\
+  2014 & \fullcite{buccola2014tom}.\\
+  2013 & \fullcite{buccola2013mot}.\\
+  2012 & \fullcite{buccola2012tom}.\\
+  2011 & \fullcite{buccola2011tom}.\\
 \end{cvsection}
 
 \clearpage
@@ -244,15 +244,15 @@
 \subsection*{Invited Talks}
 
 \begin{cvsection}
-  2015 & \null\bibentry{buccola2015tau}.\\
-  2015 & \null\bibentry{buccola2015lush}.\\
+  2015 & \fullcite{buccola2015tau}.\\
+  2015 & \fullcite{buccola2015lush}.\\
 \end{cvsection}
 
 \subsection*{Edited Volumes}
 
 \begin{cvsection}
-  2014 & \null\bibentry{buccola.etal2014}.\\
-  2013 & \null\bibentry{mckillen.buccola2013}.
+  2014 & \fullcite{buccola.etal2014}.\\
+  2013 & \fullcite{mckillen.buccola2013}.
 \end{cvsection}
 
 \section*{Teaching}
