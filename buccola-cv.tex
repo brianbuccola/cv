@@ -49,10 +49,14 @@
           {Brian Buccola}
   \setfoot[]
           [\thepage]
-          []
+          [\scriptsize \today]
           {}
           {\thepage}
-          {}
+          {\scriptsize \today}
+}
+\newpagestyle{first}[\footnotesize]{%
+  \sethead{}{}{}
+  \setfoot{}{}{\scriptsize \today}
 }
 \pagestyle{main}
 
@@ -123,7 +127,7 @@
 
 \begin{document}
 
-\thispagestyle{empty}
+\thispagestyle{first}
 
 \begin{center}
   {\Huge\bfseries Brian Buccola}
@@ -368,7 +372,5 @@ Linux shell (Bash, Zsh); Python, Haskell; Git; \LaTeX, Bib\TeX; HTML, CSS; Praat
   \item Brewing beer, cooking.
   \item Chess, puzzles.
 \end{list}
-
-\null\hfill {\footnotesize Last updated: \today}
 
 \end{document}
