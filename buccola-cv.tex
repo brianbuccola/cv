@@ -1,10 +1,9 @@
-%===============================================================================
-%
-%  vim:     set fenc=utf8 tw=79 sw=2 sts=2 et:
-%  file:    buccola-cv.tex
-%  author:  Brian Buccola
-%
-%===============================================================================
+%==============================================================================%
+%                                                                              %
+%  file:    buccola-cv.tex                                                     %
+%  author:  Brian Buccola                                                      %
+%                                                                              %
+%==============================================================================%
 
 %============%
 %            %
@@ -14,9 +13,9 @@
 
 \documentclass[11pt,letterpaper,twoside]{article}
 
-%=============================
-% Packages and basic settings
-%=============================
+%===============================%
+%  Packages and basic settings  %
+%===============================%
 
 \newcommand{\name}{Brian Buccola}
 
@@ -24,15 +23,14 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{microtype}
-\usepackage[sc,osf]{mathpazo} % Palatino font, w/ smallcaps & old-style figures
-\usepackage{marvosym} % provides \Letter and \Telefon
+\usepackage[sc,osf]{mathpazo}% Palatino font, w/ smallcaps & old-style figures
+\usepackage{marvosym}% provides \Letter and \Telefon
 
 % Margins
 \usepackage[margin=1.5in,twoside]{geometry}
 
 % Section fonts
 \usepackage{titlesec}
-\usepackage{needspace}
 \titleformat*{\section}{\normalfont\Large\scshape}
 \titleformat*{\subsection}{\normalfont\large\bfseries}
 \titleformat*{\subsubsection}{\normalfont\normalsize\itshape}
@@ -68,10 +66,10 @@
 \DeclareFieldFormat[article,inproceedings,thesis,unpublished]{title}{#1}
 
 % Packages for CV environment
-\usepackage{array} % required for defining newcolumntype with custom vrule
-\usepackage{longtable} % normal \tabular environment does not allow page breaks
-\setlength{\LTpre}{0pt} % glue before longtable
-\addtolength{\LTpost}{0pt} % glue after longtable
+\usepackage{array}% required for defining newcolumntype with custom vrule
+\usepackage{longtable}% normal \tabular environment does not allow page breaks
+\setlength{\LTpre}{0pt}% glue before longtable
+\addtolength{\LTpost}{0pt}% glue after longtable
 
 % Hyper links and PDF info
 \usepackage{hyperref}
@@ -86,9 +84,9 @@
 
 \setlength{\parindent}{0pt}
 
-%========
-% Macros
-%========
+%==========%
+%  Macros  %
+%==========%
 
 \newcommand{\datewidth}{0.22}
 \newcommand{\bodywidth}{0.75}
