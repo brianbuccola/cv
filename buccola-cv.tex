@@ -62,8 +62,10 @@
 \usepackage[backend=biber,style=numeric,maxnames=99]{biblatex}
 \addbibresource{/home/brian/repos/references/references.bib}
 %% Remove default quotes around title.
-\DeclareFieldFormat[article,inproceedings,thesis,unpublished]{citetitle}{#1}
-\DeclareFieldFormat[article,inproceedings,thesis,unpublished]{title}{#1}
+\DeclareFieldFormat[article,inproceedings,unpublished]{citetitle}{#1}
+\DeclareFieldFormat[article,inproceedings,unpublished]{title}{#1}
+\DeclareFieldFormat[thesis]{citetitle}{\textit{#1}}
+\DeclareFieldFormat[thesis]{title}{\textit{#1}}
 
 % Packages for CV environment
 \usepackage{array}% required for defining newcolumntype with custom vrule
