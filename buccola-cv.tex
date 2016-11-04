@@ -58,8 +58,8 @@
 %% Remove default quotes around title.
 \DeclareFieldFormat[article,inproceedings,unpublished]{citetitle}{#1}
 \DeclareFieldFormat[article,inproceedings,unpublished]{title}{#1}
-\DeclareFieldFormat[thesis]{citetitle}{\textit{#1}}
-\DeclareFieldFormat[thesis]{title}{\textit{#1}}
+\DeclareFieldFormat[thesis]{citetitle}{\emph{#1}}
+\DeclareFieldFormat[thesis]{title}{\emph{#1}}
 
 % Packages for CV environment
 \usepackage{array}% required for defining newcolumntype with custom vrule
@@ -166,7 +166,7 @@
 \begin{cvsection}
   2010--2015 & \parbox[t]{\bodywidth\textwidth}{%
     Ph.D., Linguistics, McGill University.\\
-    {\footnotesize Dissertation: \textit{Maximality in the Semantics of Modified Numerals}}\\
+    {\footnotesize Dissertation: \emph{Maximality in the Semantics of Modified Numerals}}\\
     {\footnotesize Supervisory committee: Luis Alonso-Ovalle (co-supervisor), Bernhard Schwarz (co-supervisor), Michael Wagner (member)}
   }\\
   2014 & \parbox[t]{\bodywidth\textwidth}{%
