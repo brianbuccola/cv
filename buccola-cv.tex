@@ -60,6 +60,8 @@
 \DeclareFieldFormat[article,inproceedings,unpublished]{title}{#1}
 \DeclareFieldFormat[thesis]{citetitle}{\emph{#1}}
 \DeclareFieldFormat[thesis]{title}{\emph{#1}}
+%% Don't print pubstate field.
+\AtEveryCitekey{\clearfield{pubstate}}
 
 % Packages for CV environment
 \usepackage{array}% required for defining newcolumntype with custom vrule
