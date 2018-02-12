@@ -11,13 +11,13 @@
 %            %
 %============%
 
-\documentclass[11pt,a4paper,twoside]{article}
+\documentclass[11pt,a4paper,twoside,french]{article}
 
 %===============================%
 %  Packages and basic settings  %
 %===============================%
 
-\newcommand{\name}{Brian Buccola}
+\newcommand{\name}{Brian BUCCOLA}
 
 % Font settings
 \usepackage[T1]{fontenc}
@@ -26,6 +26,10 @@
 \usepackage[sc,osf]{mathpazo}% Palatino font, w/ smallcaps & old-style figures
 \linespread{1.05}
 \usepackage{marvosym}% provides \Letter and \Telefon
+
+% French
+\usepackage{babel}
+\usepackage{csquotes}
 
 % Margins
 \usepackage[margin=1.5in,twoside]{geometry}
@@ -40,8 +44,8 @@
 \usepackage{titleps}
 \newpagestyle{main}[\footnotesize]{%
   \headrule
-  \sethead[Curriculum Vit\ae][][Brian Buccola]
-          {Curriculum Vit\ae}{}{Brian Buccola}
+  \sethead[Curriculum Vit\ae][][\name]
+          {Curriculum Vit\ae}{}{\name}
   \setfoot[][\thepage][\scriptsize \today]
           {}{\thepage}{\scriptsize \today}
 }
@@ -86,8 +90,8 @@
 %  Macros  %
 %==========%
 
-\newcommand{\datewidth}{0.18}
-\newcommand{\bodywidth}{0.78}
+\newcommand{\datewidth}{0.19}
+\newcommand{\bodywidth}{0.77}
 
 \newcolumntype{L}{>{\raggedright}p{\datewidth\textwidth}}
 \newcolumntype{R}{p{\bodywidth\textwidth}}
@@ -126,7 +130,7 @@
 \thispagestyle{first}
 
 \begin{center}
-  {\Huge\bfseries Brian Buccola}
+  {\Huge\bfseries \name}
 \end{center}
 
 \vspace{1em}
@@ -153,17 +157,19 @@
 
 \begin{cvsection}
   2017-- & \parbox[t]{\bodywidth\textwidth}{%
-    Chercheur postdoctoral, Laboratoire de Sciences Cognitives et Psycholinguistique, École Normale Supérieure.
-  }\\
-  2015--2017 & \parbox[t]{\bodywidth\textwidth}{%
-    Chercheur postdoctoral, Language, Logic and Cognition Center, The Hebrew University of Jerusalem.
+    Chercheur postdoctoral, Laboratoire de Sciences Cognitives et Psycholinguistique (ENS, EHESS, CNRS), Département d'Études Cognitives, École Normale Supérieure, PSL Research University.\\
+    {\footnotesize PI: Emmanuel Chemla}
   }\\
   \parbox[t]{\datewidth\textwidth}{%
     2016\\
     {\footnotesize (juin 25 -- juil.\ 27)}
-  } & \parbox[t]{\bodywidth\textwidth}{%
-    Chercheur invité, Institut Jean Nicod, École Normale Supérieure.\\
+    } & \parbox[t]{\bodywidth\textwidth}{%
+    Chercheur invité, Institut Jean Nicod (ENS, EHESS, CNRS), Département d'Études Cognitives, École Normale Supérieure, PSL Research University.\\
     {\footnotesize Sponsor: Benjamin Spector}
+  }\\
+  2015--2017 & \parbox[t]{\bodywidth\textwidth}{%
+    Chercheur postdoctoral, Language, Logic and Cognition Center, The Hebrew University of Jerusalem.\\
+    {\footnotesize PIs: Luka Crnič et Yosef Grodzinsky}
   }\\
 \end{cvsection}
 
@@ -199,13 +205,18 @@
 
 \section*{Recherche}
 
-\subsection*{Articles dans des revues et manuscrits}
+\subsection*{Récents manuscrits}
 
 \begin{cvsection}
   soumis & \fullcite{chemla.etal2018}.\\
   en révision & \fullcite{buccola.haida2017oi}.\\
   en révision & \fullcite{buccola2017barenum}.\\
   en révision & \fullcite{buccola.etal2016}.\\
+\end{cvsection}
+
+\subsection*{Articles dans des revues avec comité de lecture}
+
+\begin{cvsection}
   2016 & \fullcite{buccola.spector2016}.\\
   2012 & \fullcite{schwarz.etal2012}.\\
 \end{cvsection}
@@ -277,7 +288,7 @@
 \subsection*{Comme chargé de cours}
 
 \begin{cvsection}
-  Summer 2014 & \course{Introduction to Linguistics (LING 201), McGill University}
+  Été 2014 & \course{Introduction to Linguistics (LING 201), McGill University}
   {introduction to the techniques of linguistic analysis; topics covered included phonetics, phonology, morphology, syntax, and semantics}
   {30}.
 \end{cvsection}
@@ -285,39 +296,39 @@
 \subsection*{Comme assistant}
 
 \begin{cvsection}
-  Winter 2014 & \taship{Phonetics (LING 330), McGill University}
+  Hiver 2014 & \taship{Phonetics (LING 330), McGill University}
   {weekly lecture (2 hours/week); office hours; grade assignments, midterm exam, and final exam}
   {Morgan Sonderegger}\\
 
-  Fall 2013 & \taship{Semantics (LING 360), McGill University}
+  Automne 2013 & \taship{Semantics (LING 360), McGill University}
   {three lectures; office hours; grade assignments, midterm exam, and final exam}
   {Brendan Gillon}\\
 
-  Winter 2013 & \taship{Phonetics (LING 330), McGill University}
+  Hiver 2013 & \taship{Phonetics (LING 330), McGill University}
   {weekly lecture (2 hours/week); office hours; grade assignments, midterm exam, and final exam}
   {Morgan Sonderegger}\\
 
-  Fall 2012 & \taship{Semantics (LING 360), McGill University}
+  Automne 2012 & \taship{Semantics (LING 360), McGill University}
   {two lectures; office hours; grade assignments, midterm exam, and final exam}
   {Brendan Gillon}\\
 
-  Winter 2012 & \taship{Phonetics (LING 330), McGill University}
+  Hiver 2012 & \taship{Phonetics (LING 330), McGill University}
   {weekly lecture (2 hours/week); office hours; grade assignments, midterm exam, and final exam}
   {Heather Goad}\\
 
-  Fall 2011 & \taship{Phonology I (LING 331), McGill University}
+  Automne 2011 & \taship{Phonology I (LING 331), McGill University}
   {weekly lecture (1 hour/week); office hours; grade quizzes, assignments, midterm exam, and final exam}
   {Tobin Skinner}\\
 
-  Winter 2011 & \taship{Phonetics (LING 330), McGill University}
+  Hiver 2011 & \taship{Phonetics (LING 330), McGill University}
   {weekly lecture (2 hours/week); office hours; grade quizzes, assignments, midterm exams, and final exam}
   {Sara Mackenzie}\\
 
-  Fall 2010 & \taship{Intro to Linguistics (LING 201), McGill University}
+  Automne 2010 & \taship{Intro to Linguistics (LING 201), McGill University}
   {weekly lecture (2 hours/week); office hours; grade quizzes, assignments, midterm exam, and final exam}
   {Tanya Slavin}\\
 
-  Fall 2010 & \taship{Neuroscience of Language (LING 370), McGill University}
+  Automne 2010 & \taship{Neuroscience of Language (LING 370), McGill University}
   {grade assignments, midterm exam, and final exam}
   {Isabelle Deschamps, Andrea Santi}\\
 \end{cvsection}
@@ -343,9 +354,9 @@
 
 \begin{cvsection}
   2016-- & Member of the Editorial Board of \emph{Semantics and Pragmatics}.\\
-  Reviewer (books) & The MIT Press (1 book manuscript, 2016).\\
-  Reviewer (journals) & \emph{Acta Linguistica Academica} (1 journal article manuscript, 2017), \emph{Glossa} (1 journal article manuscript, 2017), \emph{Journal of Semantics} (2 journal article manuscripts, 2015--2016), \emph{Semantics and Pragmatics} (2 journal article manuscripts, 2016--2017).\\
-  Reviewer (conferences) & \emph{GLOW in Asia} (2016), \emph{Israel Association for Theoretical Linguistics} (2016--2017), \emph{North East Linguistic Society} (2015--2017), \emph{Semantics and Linguistic Theory} (2018), \emph{Sinn und Bedeutung} (2017).
+  Reviewer (livres) & The MIT Press (1 manuscrit, 2016).\\
+  Reviewer (revues) & \emph{Acta Linguistica Academica} (1 manuscrit, 2017), \emph{Glossa} (1 manuscrit, 2017), \emph{Journal of Semantics} (2 manuscrits, 2015--2016), \emph{Semantics and Pragmatics} (2 manuscrits, 2016--2017).\\
+  Reviewer (conférences) & \emph{GLOW in Asia} (2016), \emph{Israel Association for Theoretical Linguistics} (2016--2017), \emph{North East Linguistic Society} (2015--2017), \emph{Semantics and Linguistic Theory} (2018), \emph{Sinn und Bedeutung} (2017).
 \end{cvsection}
 
 \section*{Prix}
@@ -353,15 +364,15 @@
 \begin{cvsection}
   2014 & \parbox[t]{\bodywidth\textwidth}{%
     \award{Faculty of Arts Graduate Student Teaching Award}{\$500}\\
-    {\footnotesize Nomination-only award, which ``recognizes outstanding teaching in the Faculty by graduate students.''}
+    {\footnotesize Prix sur nomination, qui ``recognizes outstanding teaching in the Faculty by graduate students.''}
   }\\
   2014 & \parbox[t]{\bodywidth\textwidth}{%
     \award{Centre for Research on Brain, Language and Music (CRBLM) Graduate Travel Award}{\$700}\\
-    {\footnotesize Application-based award given to CRBLM student members to present their scientific results at an international conference.}
+    {\footnotesize Prix sur demande octroyé aux membres-étudiants du CRBLM pour présenter leurs résultats scientifiques à une conférence internationale.}
   }\\
   2013 & \parbox[t]{\bodywidth\textwidth}{%
     \award{Graduate Student Travel Award, McGill University}{\$1,500}\\
-    {\footnotesize A ``competitive award designed to support graduate student travel by both MA and PhD students for the purposes of research and the dissemination of research.''}
+    {\footnotesize Un ``competitive award designed to support graduate student travel by both MA and PhD students for the purposes of research and the dissemination of research.''}
   }\\
   2013 & \parbox[t]{\bodywidth\textwidth}{%
     \award{Lara Riente Memorial Prize in Linguistics, Department of Linguistics, McGill University}{\$500}\\
@@ -373,52 +384,52 @@
   }\\
   2012 & \parbox[t]{\bodywidth\textwidth}{%
     \award{NASSLLI full scholarship}{\$410}\\
-    {\footnotesize Application-based stipend covering tuition, fees, accommodation, and travel.}
+    {\footnotesize Bourse pour couvrir les frais, le logement, et le transport.}
   }\\
   2004--2008 & \parbox[t]{\bodywidth\textwidth}{%
     \award{National Merit Finalist Scholarship, Loyola University Chicago}{\textasciitilde\$100,000}\\
-    {\footnotesize Full-tuition scholarship awarded to students who have been named National Merit finalists by the National Merit Corporation.}
+    {\footnotesize Bourse ``full-tuition'' octroyée aux étudiants qui ont étés nommés National Merit Finalists par la National Merit Corporation.}
   }\\
 \end{cvsection}
 
 \section*{Mentions et associations}
 
 \begin{cvsection}
-  2016 {\footnotesize (joined)} & Israel Association for Theoretical Linguistics (IATL).\\
-  2015 {\footnotesize (joined)} & Societas Linguistica Europaea (SLE).\\
-  2012 {\footnotesize (joined)} & Centre for Research on Brain, Language and Music (CRBLM), Montr\'{e}al, Canada.\\
-  2012 {\footnotesize (joined)} & Linguistic Society of America (LSA).\\
-  2008 {\footnotesize (inducted)} & Phi Beta Kappa.\\
+  2016 {\footnotesize (inscrit)} & Israel Association for Theoretical Linguistics (IATL).\\
+  2015 {\footnotesize (inscrit)} & Societas Linguistica Europaea (SLE).\\
+  2012 {\footnotesize (inscrit)} & Centre for Research on Brain, Language and Music (CRBLM), Montr\'{e}al, Canada.\\
+  2012 {\footnotesize (inscrit)} & Linguistic Society of America (LSA).\\
+  2008 {\footnotesize (initié)} & Phi Beta Kappa.\\
   2004 & National Merit Scholar.\\
-  1999 {\footnotesize (accepted)} & Mensa.\\
+  1999 {\footnotesize (accepté)} & Mensa.\\
 \end{cvsection}
 
 \section*{Langues}
 
 \begin{cvsection}
-  English & Native\\
-  Italian & Advanced\\
-  French, German & Conversational; proficient in reading, writing\\
-  Latin, Greek & Proficient in translation; research\\
-  Spanish & Working knowledge; research\\
-  Hebrew & Beginner\\
+  Anglais & Langue maternelle\\
+  Italien & Avancé\\
+  Français, Allemand & Intermédiaire\\
+  Latin, Grec & Compétent (traduction, recherche)\\
+  Espagnol & Connaissance pratique (recherche)\\
+  Hébreu & Débutant\\
 \end{cvsection}
 
 \section*{Compétence technique}
 
 \begin{cvsection}
-  Programming & Linux shell (Bash, Zsh); Haskell, Python, R; Git; \LaTeX, Bib\TeX; HTML, CSS\\
-  Linguistics software & Ibex; Praat\\
+  Programmation & Linux shell (Bash, Zsh); Haskell, Python, R; Git; \LaTeX, Bib\TeX; HTML, CSS\\
+  Logiciel pour la linguistique & Ibex; Praat\\
 \end{cvsection}
 
 \section*{Autres passions}
 
 \begin{list}{}{\leftmargin=0pt}
-  \item History and philosophy of math and science.
-  \item Early American blues (Delta) and jazz (New Orleans).
-  \item Linux, \LaTeX{}, and other computery things.
-  \item Brewing beer, cooking.
-  \item Chess, puzzles.
+  \item L'histoire et la philosophie des mathématiques et de la science.
+  \item Le blues (Delta) et le jazz (de la Nouvelle-Orléans).
+  \item Linux, \LaTeX{}, l'informatique.
+  \item Le brassage de la bière, la cuisine.
+  \item Échecs, les casse-têtes.
 \end{list}
 
 \end{document}
