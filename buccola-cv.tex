@@ -28,7 +28,9 @@
 \usepackage[osf]{libertine}% Linux Libertine font, with old-style figures
 \usepackage[libertine]{newtxmath}% Math font for Linux Libertine
 \usepackage[scale=0.8]{FiraMono}% Fira Mono font, scaled down
-\usepackage{marvosym}% provides \Letter and \Telefon
+% \usepackage{marvosym}% provides \Letter and \Telefon
+\usepackage{fontawesome}
+\usepackage{academicons}
 
 % Margins
 \usepackage[margin=1.5in,twoside]{geometry}
@@ -69,8 +71,11 @@
 % Packages for CV environment
 \usepackage{array}% required for defining newcolumntype with custom vrule
 \usepackage{longtable}% normal \tabular environment does not allow page breaks
-\setlength{\LTpre}{0pt}% glue before longtable
-\addtolength{\LTpost}{0pt}% glue after longtable
+% \setlength{\LTpre}{0pt}% glue before longtable
+% \addtolength{\LTpost}{0pt}% glue after longtable
+
+% \pbox for two-column contact info
+\usepackage{pbox}
 
 % Hyper links and PDF info
 \usepackage{hyperref}
@@ -133,30 +138,30 @@
   {\Huge\bfseries Brian Buccola}
 \end{center}
 
-\vspace{3em}
+\bigskip
 
-\section*{Contact Information}
-
-{\footnotesize
-  \begin{minipage}[t]{0.58\textwidth}
-    Laboratoire de Sciences Cognitives et Psycholinguistique\\
-    École Normale Supérieure\\
-    29 rue d'Ulm, 75005 Paris\\
-    France
-  \end{minipage}
+\begin{flushleft}
+  \pbox[t]{\textwidth}{%
+    Department of Linguistics and Languages\\
+    Michigan State University\\
+    B-404 Wells Hall\\
+    East Lansing, MI 48824
+  }
   \hfill
-  \begin{minipage}[t]{0.32\textwidth}
-    \Telefon\ +1 312-945-6857 {\footnotesize (US)}\\
-    \Telefon\ +33 7 83 88 22 19 {\footnotesize (France)}\\
-    \Letter\ \href{mailto:brian.buccola@gmail.com}{\ttfamily brian.buccola@gmail.com}\\
-    \Keyboard\ \href{http://brianbuccola.com/}{\ttfamily brianbuccola.com}
-  \end{minipage}
-}
+  \pbox[t]{\textwidth}{%
+    \makebox[15pt][c]{\faPencil} \href{mailto:buccola@msu.edu}{\ttfamily buccola@msu.edu}\\
+    \makebox[15pt][c]{\faRocket} \href{http://brianbuccola.com/}{\ttfamily brianbuccola.com}\\
+    \makebox[15pt][c]{\faPhone} +1 312-945-6857
+  }
+\end{flushleft}
+
+\bigskip
 
 \section*{Employment}
 
 \begin{cvsection}
-  2017-- & \parbox[t]{\bodywidth\textwidth}{%
+  2019-- & Assistant Professor (tenure system), Department of Linguistics and Germanic, Slavic, Asian and African Languages, Michigan State University.\\
+  2017--2019 & \parbox[t]{\bodywidth\textwidth}{%
     Postdoctoral researcher, Laboratoire de Sciences Cognitives et Psycholinguistique, École Normale Supérieure.\\
     {\footnotesize PI: Emmanuel Chemla}
   }\\
