@@ -33,7 +33,7 @@
 \usepackage{academicons}
 
 % Margins
-\usepackage[margin=1.5in,twoside]{geometry}
+\usepackage[margin=1in,twoside]{geometry}
 
 % Section fonts
 \usepackage[nobottomtitles*]{titlesec}
@@ -71,8 +71,8 @@
 % Packages for CV environment
 \usepackage{array}% required for defining newcolumntype with custom vrule
 \usepackage{longtable}% normal \tabular environment does not allow page breaks
-% \setlength{\LTpre}{0pt}% glue before longtable
-% \addtolength{\LTpost}{0pt}% glue after longtable
+\setlength{\LTpre}{0pt}% glue before longtable
+\addtolength{\LTpost}{0pt}% glue after longtable
 
 % \pbox for two-column contact info
 \usepackage{pbox}
@@ -95,17 +95,15 @@
 %  Macros  %
 %==========%
 
-\newcommand{\datewidth}{0.21}
-\newcommand{\bodywidth}{0.75}
+\newcommand{\datewidth}{0.15}
+\newcommand{\bodywidth}{0.82}
 
 \newcolumntype{L}{>{\raggedright}p{\datewidth\textwidth}}
 \newcolumntype{R}{p{\bodywidth\textwidth}}
 
 \newenvironment{cvsection}{%
-  \setlength{\extrarowheight}{0.70ex}
+  \renewcommand{\arraystretch}{1.5}
   \begin{longtable}[l]{@{} L R @{}}
-  % Comment line above and uncomment line below to add gray vrule between date and body.
-  % \begin{longtable}{@{} L !{\myvrule} R @{}}
 }{%
   \end{longtable}
 }
@@ -121,7 +119,15 @@
 }
 
 \newcommand{\award}[2]{%
-  #1 (#2). % award description and award amount
+  #1 (#2).% award description and award amount
+}
+
+\newcommand{\datebox}[1]{% allows '\\' inside date of cv item (i.e. left column)
+  \parbox[t]{\datewidth\textwidth}{#1}
+}
+
+\newcommand{\bodybox}[1]{% allows '\\' inside body of cv item (i.e. right column)
+  \parbox[t]{\bodywidth\textwidth}{#1}
 }
 
 %========%
@@ -162,19 +168,19 @@
 
 \begin{cvsection}
   2019-- & Assistant Professor (tenure system), Department of Linguistics and Germanic, Slavic, Asian and African Languages, Michigan State University.\\
-  2017--2019 & \parbox[t]{\bodywidth\textwidth}{%
-    Postdoctoral researcher, Laboratoire de Sciences Cognitives et Psycholinguistique, École Normale Supérieure.\\
+  2017--2019 & \bodybox{%
+    Postdoctoral researcher, Laboratoire de sciences cognitives et psycholinguistique (LSCP), Centre national de la recherche scientifique (CNRS), École normale supérieure, Paris, France.\\
     {\footnotesize PI: Emmanuel Chemla}
   }\\
-  \parbox[t]{\datewidth\textwidth}{%
+  \datebox{%
     2016\\
     {\footnotesize (Jun.\ 25 -- Jul.\ 27)}
-  } & \parbox[t]{\bodywidth\textwidth}{%
-    Invited scholar, Institut Jean Nicod, École Normale Supérieure.\\
+  } & \bodybox{%
+  Invited scholar, Institut Jean Nicod (IJN), Centre national de la recherche scientifique (CNRS), École normale supérieure, Paris, France.\\
     {\footnotesize Sponsor: Benjamin Spector}
   }\\
-  2015--2017 & \parbox[t]{\bodywidth\textwidth}{%
-    Postdoctoral fellow, Language, Logic and Cognition Center, The Hebrew University of Jerusalem.\\
+  2015--2017 & \bodybox{%
+    Postdoctoral fellow, Language, Logic and Cognition Center, The Hebrew University of Jerusalem, Jerusalem, Israel.\\
     {\footnotesize PIs: Luka Crnič and Yosef Grodzinsky}
   }\\
 \end{cvsection}
@@ -182,22 +188,22 @@
 \section*{Education}
 
 \begin{cvsection}
-  2010--2015 & \parbox[t]{\bodywidth\textwidth}{%
-    Ph.D., Linguistics, McGill University.\\
+  2010--2015 & \bodybox{%
+    Ph.D., Linguistics, McGill University, Montreal, QC, Canada.\\
     {\footnotesize Dissertation: \emph{Maximality in the Semantics of Modified Numerals}}\\
     {\footnotesize Supervisory committee: Luis Alonso-Ovalle (co-supervisor), Bernhard Schwarz (co-supervisor), Michael Wagner (member)}
   }\\
-  2014 & \parbox[t]{\bodywidth\textwidth}{%
+  2014 & \bodybox{%
     Visiting student, Massachusetts Institute of Technology.\\
     {\footnotesize Sponsor: Kai von Fintel}
   }\\
-  2009--2010 & \parbox[t]{\bodywidth\textwidth}{%
-    Qualifying Year Program, McGill University.\\
+  2009--2010 & \bodybox{%
+    Qualifying Year Program, McGill University, Montreal, QC, Canada.\\
     {\footnotesize (Permits strong candidates to make up gaps in their linguistics background by taking appropriate undergraduate courses.)}
   }\\
-  2004--2008 & \parbox[t]{\bodywidth\textwidth}{%
-    B.S., Mathematics, Honors College, Loyola University Chicago.\\
-    B.A., Classics, Honors College, Loyola University Chicago.
+  2004--2008 & \bodybox{%
+    B.A., Classics, Honors College, Loyola University Chicago.\\
+    B.S., Mathematics, Honors College, Loyola University Chicago.
   }\\
   1999--2004 & Jesuit High School New Orleans.\\
 \end{cvsection}
@@ -224,7 +230,8 @@
 \subsection*{Manuscripts}
 
 \begin{cvsection}
-  2020 & \fullcite{buccola.ma2020}.\\
+  2020 & \fullcite{dautriche.etal2020}.\\
+  2020 & \fullcite{ma.buccola2020}.\\
   2017 & \fullcite{buccola2017barenum}.\\
 \end{cvsection}
 
@@ -257,7 +264,7 @@
 \subsection*{Invited commentaries}
 
 \begin{cvsection}
-  2019 & Commentator on ``True clauses and false connectives'' by Karolina Krzyżanowska (University of Amsterdam), Paris-Amsterdam-London Logic Meetings of Young Researchers (PALLMYR) 12, École Normale Supérieure.\\
+  2019 & Commentator on ``True clauses and false connectives'' by Karolina Krzyżanowska (University of Amsterdam), Paris-Amsterdam-London Logic Meetings of Young Researchers (PALLMYR) 12, École normale supérieure.\\
 \end{cvsection}
 
 \subsection*{Presentations}
@@ -312,35 +319,52 @@
 
 \subsection*{Teaching}
 
-\subsubsection*{Michigan State University (2019--)}
-
 \begin{cvsection}
-  Undergraduate & LIN 401: Introduction to Linguistics.\\
-                & LIN 437: Semantics and Pragmatics.\\
-  Graduate & LIN 837: Adv.~Studies in Semantics and Pragmatics.\\
-\end{cvsection}
-
-\subsubsection*{McGill University (Summer 2014)}
-
-\begin{cvsection}
-  Undegraduate & LING 201: Introduction to Linguistics.\\
+  Undergrad & LIN 401: Introduction to Linguistics, MSU (2019--).\\
+            & LIN 437: Semantics and Pragmatics, MSU (2019--).\\
+            & LING 201: Introduction to Linguistics, McGill University (2014).\\
+  Graduate & LIN 837: Advanced Studies in Semantics and Pragmatics, MSU (2020--).\\
 \end{cvsection}
 
 \subsection*{Advising}
 
-\subsubsection*{Committee chair or co-chair}
+\subsubsection*{Ph.D.~committee chair or co-chair}
 
 \begin{cvsection}
-  Ph.D. & Cong, Yan. \emph{Degree constructions in Mandarin Chinese} (working title). In progress.\\
-  Ph.D. & Cousins, Shannon. In progress. (Co-chair with Alan Beretta)\\
-  Ph.D. & Ma, Ye. In progress. (Co-chair with Alan Beretta)\\
+  in progress & Yan Cong (chair).\\
+  in progress & Shannon Cousins (co-chair with Alan Beretta).\\
+  in progress & Ye Ma (co-chair with Alan Beretta).\\
 \end{cvsection}
 
-\subsubsection*{Committee member}
+\subsubsection*{Ph.D.~committee member}
 
 \begin{cvsection}
-  Ph.D. & 5 students in progress (syntax/semantics, neurolinguistics, psycholinguistics, language acquisition).\\
-  M.A. & 1 student (phonetics, computational modeling).\\
+  in progress & Komeil Kolahi Ahari, Yunting Gu, Josh Herrin, Mitch Klein, Philip Pellino, Jason Smith, Yaxuan Wang, Jingying Xu.\\
+  2019 & Ni-La Lê. \emph{Vietnamese Pluralizers' Properties and their Effects on the Structure and the Acquisition of Vietnamese Noun Phrases}.\\
+\end{cvsection}
+
+\subsubsection*{Ph.D.~comprehensive paper advisor}
+
+\begin{cvsection}
+  2020 & Yan Cong. Degree Interpretations and their Competitions.
+\end{cvsection}
+
+\subsubsection*{M.A.~committee member}
+
+\begin{cvsection}
+  2020 & Isaac Sarver. \emph{A Systematic Evaluation of Computational Models of Phonotactics}.
+\end{cvsection}
+
+\subsubsection*{B.A.~thesis advisor}
+
+\begin{cvsection}
+  in progress & Zack Sneed.
+\end{cvsection}
+
+\subsubsection*{External committee member}
+
+\begin{cvsection}
+  2020 & Émile Enguehard. Member, \emph{Comité de suivre} (progress report committee), École normale supérieure, Paris, France.
 \end{cvsection}
 
 \section*{Service}
@@ -353,34 +377,49 @@
   2016-- & Member of the Editorial Board of \emph{Semantics and Pragmatics}.\\
 \end{cvsection}
 
-\subsubsection*{Ad-hoc reviewing}
+\subsubsection*{Reviewing}
 
 \begin{cvsection}
-  Books & The MIT Press (1 book manuscript), University of Toronto Press (1 book proposal).\\
-  Journals & \emph{Acta Linguistica Academica}, \emph{Glossa} (5x), \emph{Journal of Semantics} (3x), \emph{Language and Linguistics Compass}, \emph{Linguistics and Philosophy} (2x), \emph{Natural Language Semantics} (2x), \emph{Semantics and Pragmatics} (6x).\\
-  Conferences & \emph{GLOW in Asia}, \emph{Israel Association for Theoretical Linguistics}, \emph{North East Linguistic Society}, \emph{Semantics and Linguistic Theory}, \emph{Sinn und Bedeutung}.
+  Books & The MIT Press, University of Toronto Press.\\
+  Journals & \emph{Acta Linguistica Academica}, \emph{Glossa}, \emph{Journal of Semantics}, \emph{Language and Linguistics Compass}, \emph{Linguistics and Philosophy}, \emph{Natural Language Semantics}, \emph{Semantics and Pragmatics}.\\
+  \datebox{%
+    Conferences\\
+    {\footnotesize (regular)}
+  } & Amsterdam Colloquium, North East Linguistic Society (NELS), Semantics and Linguistic Theory (SALT), Sinn und Bedeutung (SuB), West Coast Conference on Formal Linguistics (WCCFL).\\
+  \datebox{%
+    Conferences\\
+    {\footnotesize (ad hoc)}
+  } & Experimental approaches to language universals in structure and meaning (ExUni), GLOW in Asia, Israel Association for Theoretical Linguistics (IATL), Seoul International Conference on Generative Grammar (SICOGG).\\
 \end{cvsection}
 
 \subsection*{To Michigan State University}
 
+\subsubsection*{College of Arts and Letters}
+
+\begin{cvsection}
+  2020-- & Member, College Undergraduate Committee (CUC).\\
+  2020 & Member, CAL Awards Committee.
+\end{cvsection}
+
 \subsubsection*{Linguistics program}
 
 \begin{cvsection}
-  2019-- & Director, MSU Semantics and Pragmatics Group.\\
-  2019-- & Handbook review sub-committee.\\
-  2019 & Search committee for fixed-term position in Linguistics (general linguistics, cognitive science).\\
-  2019 & Graduate admissions committee (for Spring 2020).\\
+  2019-- & Director, MSU Semantics and Pragmatics Lab.\\
+  2021 & Member, Graduate admissions subcommittee (for Fall 2021).\\
+  2020 & Member, Curriculum review subcommittee.\\
+  2020 & Member, Summer fellowship review subcommittee.\\
+  2020 & Member, Graduate admissions subcommittee (for Spring 2021).\\
+  2019--2020 & Member, Handbook review sub-committee.\\
+  2019 & Member, Search committee for fixed-term position in Linguistics (general linguistics, cognitive science).\\
+  2019 & Member, Graduate admissions subcommittee (for Spring 2020).\\
 \end{cvsection}
 
 \subsection*{To previous institutions}
 
 \begin{cvsection}
-  2018--2019 & Amazon Mechanical Turk (MTurk) administrator, École Normale Supérieure (LSCP and IJN).\\
+  2018--2019 & Amazon Mechanical Turk (MTurk) administrator, École normale supérieure (LSCP and IJN).\\
   2015--2017 & Organizer (with Andreas Haida), LLCC Semantics-Pragmatics Research Group, The Hebrew University of Jerusalem.\\
-  2015 & \parbox[t]{\bodywidth\textwidth}{%
-    Department publications manager, McGill University.\\
-    {\footnotesize Compiled and managed a database of department publications for 2014, in Bib\TeX\ format, for the department's Annual Report.}
-  }\\
+  2015 & Department publications manager, McGill University.\\
   2013--2015 & Organizing committee, Syntax-Semantics Research Group, McGill University.\\
   2012--2014 & Co-editor, McGill Working Papers in Linguistics (McGWPL).\\
   2013 & Organizing committee, Exploring the Interfaces 2: Implicatures, Alternatives, and the Semantics-Pragmatics Interface (ETI~2), McGill University.\\
@@ -391,31 +430,31 @@
 \section*{Awards}
 
 \begin{cvsection}
-  2014 & \parbox[t]{\bodywidth\textwidth}{%
+  2014 & \bodybox{%
     \award{Faculty of Arts Graduate Student Teaching Award}{\$500}\\
     {\footnotesize Nomination-only award, which ``recognizes outstanding teaching in the Faculty by graduate students.''}
   }\\
-  2014 & \parbox[t]{\bodywidth\textwidth}{%
+  2014 & \bodybox{%
     \award{Centre for Research on Brain, Language and Music (CRBLM) Graduate Travel Award}{\$700}\\
     {\footnotesize Application-based award given to CRBLM student members to present their scientific results at an international conference.}
   }\\
-  2013 & \parbox[t]{\bodywidth\textwidth}{%
+  2013 & \bodybox{%
     \award{Graduate Student Travel Award, McGill University}{\$1,500}\\
     {\footnotesize A ``competitive award designed to support graduate student travel by both MA and PhD students for the purposes of research and the dissemination of research.''}
   }\\
-  2013 & \parbox[t]{\bodywidth\textwidth}{%
+  2013 & \bodybox{%
     \award{Lara Riente Memorial Prize in Linguistics, Department of Linguistics, McGill University}{\$500}\\
     {\footnotesize ``Awarded by the Faculty of Arts Scholarships committee on the recommendation of the Department of Linguistics on the basis of high academic standing to a graduate or an undergraduate student enrolled in a full-time degree program in Linguistics.''}
   }\\
-  2012--2013 & \parbox[t]{\bodywidth\textwidth}{%
+  2012--2013 & \bodybox{%
     \award{Cremona Memorial Fellowship in Linguistics, Department of Linguistics, McGill University}{\$8,479}\\
     {\footnotesize ``Awarded by the Department of Linguistics to an outstanding graduate student registered in the Ph.D.\ or M.A.\ program in Linguistics.''}
   }\\
-  2012 & \parbox[t]{\bodywidth\textwidth}{%
+  2012 & \bodybox{%
     \award{NASSLLI full scholarship}{\$410}\\
     {\footnotesize Application-based stipend covering tuition, fees, accommodation, and travel.}
   }\\
-  2004--2008 & \parbox[t]{\bodywidth\textwidth}{%
+  2004--2008 & \bodybox{%
     \award{National Merit Finalist Scholarship, Loyola University Chicago}{\textasciitilde\$100,000}\\
     {\footnotesize Full-tuition scholarship awarded to students who have been named National Merit finalists by the National Merit Corporation.}
   }\\
