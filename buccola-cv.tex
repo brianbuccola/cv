@@ -95,15 +95,16 @@
 %  Macros  %
 %==========%
 
-\newcommand{\datewidth}{0.15}
-\newcommand{\bodywidth}{0.82}
+\newcommand{\datewidth}{0.2}
+\newcommand{\bodywidth}{0.8}
 
-\newcolumntype{L}{>{\raggedright}p{\datewidth\textwidth}}
+\newcolumntype{L}{p{\datewidth\textwidth}}
 \newcolumntype{R}{p{\bodywidth\textwidth}}
 
+\renewcommand{\arraystretch}{1.5}
+
 \newenvironment{cvsection}{%
-  \renewcommand{\arraystretch}{1.5}
-  \begin{longtable}[l]{@{} L R @{}}
+  \begin{longtable}[l]{@{}L@{} @{}R@{}}
 }{%
   \end{longtable}
 }
