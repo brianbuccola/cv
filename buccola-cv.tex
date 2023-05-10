@@ -53,9 +53,34 @@
 \pagestyle{main}
 
 % References
-\usepackage[backend=biber,style=numeric,maxnames=99]{biblatex}
+\usepackage[backend=biber,style=authoryear-comp,maxnames=99]{biblatex}
 \addbibresource{/home/brian/repos/references/references.bib}
 \renewcommand{\subtitlepunct}{\addcolon\space}
+%% Don't print "In: " before journal names
+\renewbibmacro{in:}{}
+%% Don't print quotation marks around title.
+% \DeclareFieldFormat[article,incollection,inproceedings,misc,thesis,unpublished]{title}{#1}
+%% Don't print "pp." before pages.
+\DeclareFieldFormat{pages}{#1}
+%% Print date as "YYYY." instead of "(YYYY)".
+\usepackage{xpatch}
+\xpatchbibmacro{date+extradate}{%
+  \printtext[parens]%
+}{%
+  \setunit*{\adddot\space}%
+  \printtext%
+}{}{}
+%% Don't print letter labels after date.
+%% (Necessary for authoryear style, which forces labeldateparts=true.)
+\DeclareFieldInputHandler{extradate}{\def\NewValue{}}
+\DeclareFieldInputHandler{extradatescope}{\def\NewValue{}}
+%% Write "v(n)" instead of "v.n" for volume and number.
+\renewbibmacro*{volume+number+eid}{%
+  \printfield{volume}%
+  \printfield{number}%
+  \setunit{\addcomma\space}%
+  \printfield{eid}}
+\DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
 
 % Packages for CV environment
 \usepackage{array}% required for defining newcolumntype with custom vrule
