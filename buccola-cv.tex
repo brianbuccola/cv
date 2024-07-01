@@ -93,6 +93,13 @@
 % \pbox for two-column contact info
 \usepackage{pbox}
 
+% ORCID
+%% Get icon (svg) at:
+%% https://orcid.figshare.com/articles/figure/ORCID_iD_icon_graphics/5008697?file=8439047
+\usepackage{svg}
+\newcommand*{\orcid}[1]{\href{https://orcid.org/#1}{\textcolor[HTML]{A6CE39}{\includesvg[height=16px]{ORCIDiD_iconvector.svg}}}}
+\newcommand*{\myorcid}{0000-0001-9234-7869}
+
 % Hyper links and PDF info
 \usepackage[hidelinks]{hyperref}
 \hypersetup{%
@@ -157,9 +164,9 @@
 
 \thispagestyle{first}
 
-\begin{center}
-  {\Huge\bfseries Brian Buccola}
-\end{center}
+\begin{flushleft}
+  {\Huge\bfseries\color{spartangreen} \name{} \orcid{\myorcid}}
+\end{flushleft}
 
 \bigskip
 
