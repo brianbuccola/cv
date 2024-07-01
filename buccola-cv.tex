@@ -30,11 +30,16 @@
 % Margins
 \usepackage[margin=1in,twoside]{geometry}
 
+% Colors
+\usepackage{xcolor}
+\definecolor{spartangreen}{HTML}{18453B}
+\definecolor{msuorange}{HTML}{CB5A28}
+
 % Section fonts
 \usepackage[nobottomtitles*]{titlesec}
-\titleformat*{\section}{\normalfont\Large\scshape}
-\titleformat*{\subsection}{\normalfont\large\bfseries}
-\titleformat*{\subsubsection}{\normalfont\normalsize\itshape}
+\titleformat*{\section}{\normalfont\Large\scshape\color{spartangreen}}
+\titleformat*{\subsection}{\normalfont\large\bfseries\color{spartangreen}}
+\titleformat*{\subsubsection}{\normalfont\normalsize\itshape\color{spartangreen}}
 
 % Headers, footers, and page styles
 \usepackage{titleps}
@@ -95,7 +100,9 @@
   pdftitle    = {Curriculum vitae -- \name},
   pdfsubject  = {Curriculum vitae},
   pdfkeywords = {\name, CV, linguistics},
-  pdfpagemode = UseNone
+  pdfpagemode = UseNone,
+  colorlinks  = true,
+  allcolors   = msuorange,
 }
 
 \setlength{\parindent}{0pt}
